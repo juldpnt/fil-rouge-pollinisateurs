@@ -11,54 +11,42 @@ if (!require("tidyr", quietly = TRUE)) {
   install.packages("tidyr")}
 library("tidyr")
 
-if (!require("geonames", quietly = TRUE)) {
-  install.packages("geonames")}
-library("geonames")
-# Set the Geonames username
-options(geonamesUsername = "spipoll")
+## operations on the spipoll dataset
 
-# import the dataset as a dataframe
-df <- read.csv("data/spipoll.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+# import the dataset spipoll as a dataframe
+df_spipoll <- read.csv("data/spipoll.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 
-# extract the columns "coordonnees_GPS" and "code_postal"
-df <- df %>% select(coordonnees_GPS, code_postal)
+# extract the columns "collection_\id", "coordonnees_\GPS" and "code_\postal" from df_spipoll
+df_spipoll <- df_spipoll %>% select(collection_id, coordonnees_GPS, code_postal)
 
 # separate the column "coordonnees_GPS" into 2 columns "latitude" and "longitude"
-df <- df %>% separate(coordonnees_GPS, c("latitude", "longitude"), sep = ", ", remove = TRUE)
-
-# add empty columns for the GPS coordinates infered from the postal code
-df <- df %>% mutate(latitude_CP = NA, longitude_CP = NA)
+df_spipoll <- df_spipoll %>% separate(coordonnees_GPS, c("latitude", "longitude"), sep = ", ", remove = TRUE)
 
 
+## operations on the governmental "codes postaux" dataset
 
-# Define a function to get coordinates for a vector of postal codes
-get_coordinates <- function(postal_codes) {
-  coordinates <- data.frame(lat = numeric(length(postal_codes)), lng = numeric(length(postal_codes)))
-  for (i in seq_along(postal_codes)) {
-    result <- GNpostalCodeSearch(postal_codes[i], country = "FR")
-    if (nrow(result) > 0) {
-      coordinates[i, ] <- result[1, c("lat", "lng")]
-    }
-  }
-  return(coordinates)
-}
+# import the dataset codes postaux as a dataframe
+df_poste <- read.csv("data/datagouv_codespostaux.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 
-# Split the postal codes into batches of 100
-postal_code_batches <- split(df$code_postal, ceiling(seq_along(df$code_postal)/100))
-
-# Get the coordinates for each batch and combine them
-coordinates <- do.call(rbind, lapply(postal_code_batches, get_coordinates))
-
-# Add the GPS coordinates to the dataframe
-df$latitude_CP <- coordinates$lat
-df$longitude_CP <- coordinates$lng
+# separate the columns (separator ;)
+df_poste <- df_poste %>% separate(X.Code_commune_INSEE.Nom_de_la_commune.Code_postal.Libell._d_acheminement.Ligne_5, into = c("code_commune_INSEE", "nom_de_la_commune", "code_postal","libelle","ligne_5"), sep = ";")
+# extract the column "code_\postal" from df_poste
+df_poste <- df_poste %>% select(code_postal)
 
 
+## quantifying the amount of data in the spipoll dataset that are in metropolitan France  
 
+# Add a new column 'France metropolitaine' to df_\spipoll with the data that are in df_poste
+df_spipoll <- df_spipoll %>% mutate(`France metropolitaine` = code_postal %in% df_poste$code_postal)
+print(head(df_spipoll))
 
+# count the number of rows with TRUE and FALSE
+print(df_spipoll %>% count(`France metropolitaine`))
 
+# separate df_\spipoll into 2 dataframes: df_\spipoll_\metropole and df_\spipoll_\not_metropole
+df_spipoll_metropole <- df_spipoll %>% filter(`France metropolitaine` == TRUE)
+df_spipoll_not_metropole <- df_spipoll %>% filter(`France metropolitaine` == FALSE)
 
-
-
-# display the first 6 rows of the dataframe
-print(head(df))
+# save the 2 dataframes as csv files
+write.csv(df_spipoll_metropole, "data/spipoll_metropole.csv", row.names = FALSE)
+write.csv(df_spipoll_not_metropole, "data/spipoll_hors_metropole.csv", row.names = FALSE)
