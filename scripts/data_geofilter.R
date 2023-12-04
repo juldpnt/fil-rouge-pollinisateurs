@@ -43,6 +43,9 @@ print(head(df_spipoll))
 # count the number of rows with TRUE and FALSE
 print(df_spipoll %>% count(`France metropolitaine`))
 
+# keep only the first row for each collection_id
+df_spipoll <- df_spipoll %>% distinct(collection_id, .keep_all = TRUE)
+
 # separate df_\spipoll into 2 dataframes: df_\spipoll_\metropole and df_\spipoll_\not_metropole
 df_spipoll_metropole <- df_spipoll %>% filter(`France metropolitaine` == TRUE)
 df_spipoll_not_metropole <- df_spipoll %>% filter(`France metropolitaine` == FALSE)
