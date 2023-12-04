@@ -54,6 +54,9 @@ df_spipoll <- df_spipoll %>% distinct(collection_id, .keep_all = TRUE)
 df_spipoll_metropole <- df_spipoll %>% filter(`France metropolitaine` == TRUE)
 df_spipoll_not_metropole <- df_spipoll %>% filter(`France metropolitaine` == FALSE)
 
+# remove the rows from the south hemisphera in df_metropole
+df_spipoll_metropole <- df_spipoll_metropole %>% filter(latitude > 0)
+
 # save the 2 dataframes as csv files
 write.csv(df_spipoll_metropole, "data/spipoll_metropole.csv", row.names = FALSE)
 write.csv(df_spipoll_not_metropole, "data/spipoll_hors_metropole.csv", row.names = FALSE)

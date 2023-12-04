@@ -63,7 +63,7 @@ df_spipoll_metropole <- read.csv("data/spipoll_metropole.csv", header = TRUE, se
 
 # extract the columns longitude and latitude from each dataframe
 df_spipoll_hors_metropole <- df_spipoll_hors_metropole %>% select(longitude, latitude)
-df_spipoll_metropole <- df_spipoll_metropole %>% select(longitude, latitude)
+df_spipoll_metropole <- df_spipoll_metropole %>% select(longitude, latitude, code_postal)
 
 # convert the columns longitude and latitude to numeric
 df_spipoll_hors_metropole$longitude <- as.numeric(df_spipoll_hors_metropole$longitude)
@@ -86,4 +86,4 @@ ggplot() +
         axis.text = element_blank(),
         axis.title = element_blank()) +
   labs(title = "World Map Plot", caption = "Source: Your Data Source")
-ggsave("figures/world_map_filtered_without97-98.png", dpi = 300)
+ggsave("figures/world_map_filtered.png", dpi = 300)
