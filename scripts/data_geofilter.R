@@ -19,11 +19,8 @@ df4 <- suppressMessages(read_tsv("data/spipoll_600k_75k_202311131020.txt"))
 # merge the 4 dataframes into one
 df <- rbind(df1, df2, df3, df4)
 
-# Declare unused variables
-unused_vars <- c('collection_nom', 'user_pseudo', 'user_email', 'commentaire', 'photo_lieu', 'distance_ruche', 'collection_heure_fin', 'insecte_photo_1', 'insecte_photo_2', 'date_creation_bdd', 'date_update_bdd')
+# extract the columns "coordonnees_GPS" and "code_postal"
+df <- df %>% select(coordonnees_GPS, code_postal)
 
-# Remove unused variables from the dataframe
-df <- df %>% select(-unused_vars)
-
-# save the dataframe as a csv file
-write.csv(df, "data/spipoll.csv", row.names = FALSE)
+# display the first 6 rows of the dataframe
+head(df)
