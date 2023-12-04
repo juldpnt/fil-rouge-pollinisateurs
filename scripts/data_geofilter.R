@@ -30,15 +30,19 @@ df_poste <- read.csv("data/datagouv_codespostaux.csv", header = TRUE, sep = ",",
 
 # separate the columns (separator ;)
 df_poste <- df_poste %>% separate(X.Code_commune_INSEE.Nom_de_la_commune.Code_postal.Libell._d_acheminement.Ligne_5, into = c("code_commune_INSEE", "nom_de_la_commune", "code_postal","libelle","ligne_5"), sep = ";")
+
 # extract the column "code_\postal" from df_poste
 df_poste <- df_poste %>% select(code_postal)
 
+# identify and remove the rows starting by "97" and "98" in df_poste
+df_poste <- df_poste %>% filter(!grepl("^97", code_postal))
+df_poste <- df_poste %>% filter(!grepl("^98", code_postal))
 
 ## quantifying the amount of data in the spipoll dataset that are in metropolitan France  
 
 # Add a new column 'France metropolitaine' to df_\spipoll with the data that are in df_poste
 df_spipoll <- df_spipoll %>% mutate(`France metropolitaine` = code_postal %in% df_poste$code_postal)
-print(head(df_spipoll))
+#print(head(df_spipoll))
 
 # count the number of rows with TRUE and FALSE
 print(df_spipoll %>% count(`France metropolitaine`))
