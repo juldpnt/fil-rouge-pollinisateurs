@@ -52,8 +52,8 @@ df_spipoll <- df_spipoll %>% distinct(collection_id, .keep_all = TRUE)
 
 # separate df_\spipoll into 2 dataframes: df_\spipoll_\metropole and df_\spipoll_\not_metropole
 df_spipoll_metropole <- df_spipoll %>% filter(`France metropolitaine` == TRUE)
-df_spipoll_not_metropole <- df_spipoll %>% filter(`France metropolitaine` == FALSE)
+df_spipoll_hors_metropole <- df_spipoll %>% filter(`France metropolitaine` == FALSE)
 
 # save the 2 dataframes as csv files
 write.csv(df_spipoll_metropole, "data/spipoll_metropole.csv", row.names = FALSE)
-write.csv(df_spipoll_not_metropole, "data/spipoll_hors_metropole.csv", row.names = FALSE)
+write.csv(df_spipoll_hors_metropole, "data/spipoll_hors_metropole.csv", row.names = FALSE)
