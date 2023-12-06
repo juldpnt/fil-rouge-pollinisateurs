@@ -2,19 +2,15 @@
 if (!require("ggplot2", quietly = TRUE)) {
   install.packages("ggplot2")
 }
-
 if (!require("maps", quietly = TRUE)) {
   install.packages("maps")
 }
-
 if (!require("dplyr", quietly = TRUE)) {
   install.packages("dplyr")
 }
-
 if (!require("readr", quietly = TRUE)) {
   install.packages("readr")
 }
-
 if (!require("tidyr", quietly = TRUE)) {
   install.packages("tidyr")}
 
@@ -53,8 +49,6 @@ library("tidyr")
 #   labs(title = "World Map Plot", caption = "Source: Your Data Source")
 # ggsave("figures/world_map.png", dpi = 300)
 
-
-
 ## Creating a filtered world map based on the "codes postaux" filtering from data_geofilter.R
 
 # import the datasets as dataframes
@@ -73,9 +67,9 @@ world_map <- map_data("world")
 # create the 2nd plot with code_postal as label
 ggplot() +
   geom_polygon(data = world_map, aes(x = long, y = lat, group = group), fill = "lightblue", color = "white", size = 0.1) +
-  # geom_point(data = df_spipoll_hors_metropole, aes(x = longitude, y = latitude), color = "red", size = 1, alpha = 0.5) +
-  geom_point(data = df_spipoll_metropole, aes(x = longitude, y = latitude), color = "#cc00ff", size = 1, alpha = 1) +
-  #geom_text(data = df_spipoll_metropole, aes(x = longitude, y = latitude, label = collection_id), color = "#ffa602", size = 1, alpha = 1, nudge_x = 0.1, nudge_y = 0.1) +
+  #geom_point(data = df_spipoll_hors_metropole, aes(x = longitude, y = latitude), color = "red", size = 1, alpha = 0.5) +
+  geom_point(data = df_spipoll_metropole, aes(x = longitude, y = latitude), color = "green", size = 1, alpha = 0.1) +
+  #geom_text(data = df_spipoll_hors_metropole, aes(x = longitude, y = latitude, label = collection_id), color = "#ffa602", size = 1, alpha = 1, nudge_x = 0.1, nudge_y = 0.1) +
   coord_map("mercator", xlim=c(-180,180)) +
   theme_minimal() +
   theme(panel.grid = element_blank(),
