@@ -10,16 +10,13 @@ if (!require("readr", quietly = TRUE)) {
 library("dplyr")
 library("readr")
 
-# read the txt data of the 4 files in the folder 'data'
-df1 <- suppressMessages(read_tsv("data/spipoll_1_200k_202311130947.txt"))
-df2 <- suppressMessages(read_tsv("data/spipoll_200k_400k_202311130949.txt"))
-df3 <- suppressMessages(read_tsv("data/spipoll_400k_200k_202311130959.txt"))
-df4 <- suppressMessages(read_tsv("data/spipoll_600k_75k_202311131020.txt"))
+# import the dataset spipoll as a dataframe
+df_spipoll <- read.csv("data/spipoll.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 
-## dataframes contain non redundant information, no overlap (see first 2 rows)
-
-# merge the 4 dataframes into one
-df <- rbind(df1, df2, df3, df4)
+# # give the number of missing values for column code_postal
+# print("Number of missing values for column code_postal")
+# print(sum(is.na(df_spipoll$code_postal)))
+# print("\n")
 
 # Gives the first 6 rows
 print("First 6 rows")
