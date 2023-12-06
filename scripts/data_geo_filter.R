@@ -10,6 +10,12 @@ library("dplyr")
 library("readr")
 library("tidyr")
 
+# northern-most, southern-most, western-most and eastern-most points of Metropolitan France
+latitude_nord <- 51.065
+latitude_sud <- 42.19
+longitude_ouest <- -5.15
+longitude_est <- 9.325
+
 # import the dataset spipoll_metropole and spipoll_hors_metropole as dataframes
 df_spipoll_metropole <- read.csv("data/spipoll_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 df_spipoll_hors_metropole <- read.csv("data/spipoll_hors_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
@@ -20,9 +26,9 @@ df_spipoll_hors_metropole <- df_spipoll_hors_metropole %>% select(longitude, lat
 ## rows from df_spipoll_metropole that are outside of Metropolitan France : false positives
 
 # rows where latitude is between the northern-most and southern-most points of Metropolitan France
-within_latitude_France_df <- df_spipoll_metropole %>% filter(latitude > 42.19 & latitude < 51.065)
+within_latitude_France_df <- df_spipoll_metropole %>% filter(latitude > latitude_sud & latitude < latitude_nord)
 # rows where longitude is between the western-most and eastern-most points of Metropolitan France
-within_longitude_France_df <- df_spipoll_metropole %>% filter(longitude > -5.15 & longitude < 9.33)
+within_longitude_France_df <- df_spipoll_metropole %>% filter(longitude > longitude_ouest & longitude < longitude_est)
 
 # identify the rows in df_spipoll_metropole that are both in within_latitude_France_df and within_longitude_France_df
 within_France_df <- semi_join(within_latitude_France_df, within_longitude_France_df, by = c("collection_id", "longitude", "latitude"))
@@ -34,9 +40,9 @@ df_spipoll_metropole <- semi_join(df_spipoll_metropole, within_France_df, by = c
 ## rows from df_spipoll_hors_metropole that are inside of Metropolitan France : false negatives
 
 # rows where latitude is between the northern-most and southern-most points of Metropolitan France
-within_latitude_France_df <- df_spipoll_hors_metropole %>% filter(latitude > 42.19 & latitude < 51.065)
+within_latitude_France_df <- df_spipoll_hors_metropole %>% filter(latitude > latitude_sud & latitude < latitude_nord)
 # rows where longitude is between the western-most and eastern-most points of Metropolitan France
-within_longitude_France_df <- df_spipoll_hors_metropole %>% filter(longitude > -5.15 & longitude < 9.33)
+within_longitude_France_df <- df_spipoll_hors_metropole %>% filter(longitude > longitude_ouest & longitude < longitude_est)
 
 # identify the rows in df_spipoll_hors_metropole that are both in within_latitude_France_df and within_longitude_France_df
 within_France_df <- semi_join(within_latitude_France_df, within_longitude_France_df, by = c("collection_id", "longitude", "latitude"))
