@@ -27,3 +27,21 @@ df <- df %>% select(-unused_vars)
 
 # save the dataframe as a csv file
 write.csv(df, "data/spipoll.csv", row.names = FALSE)
+
+# # Run the script position_filters/run_filters.R
+# source("scripts/data_treatment/position_filters/run_filters.R")
+
+## Modify spipoll.csv by removing the rows whose collection_id are also in spipoll_hors_metropole.csv
+
+# Load the data from the CSV files
+spipoll <- read.csv("data/spipoll.csv")
+spipoll_hors_metropole <- read.csv("data/spipoll_hors_metropole.csv")
+
+# Identify the rows to remove
+rows_to_remove <- spipoll$collection_id %in% spipoll_hors_metropole$collection_id
+
+# Remove the rows
+spipoll <- spipoll[!rows_to_remove,]
+
+# Save the modified data frame
+write.csv(spipoll, "data/spipoll.csv", row.names = FALSE)
