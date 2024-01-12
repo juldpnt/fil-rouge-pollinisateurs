@@ -21,7 +21,7 @@ library("readr")
 library("tidyr")
 
 # import the dataset spipoll as a dataframe
-df_spipoll <- read.csv("data/spipoll.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+df_spipoll <- read.csv("data/temporary_data/spipoll_unfiltered.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 
 # extract the column "coordonnees_\GPS" from df_spipoll
 df_spipoll <- df_spipoll %>% select(coordonnees_GPS)
@@ -46,14 +46,14 @@ ggplot() +
         axis.ticks = element_blank(),
         axis.text = element_blank(),
         axis.title = element_blank()) +
-  labs(title = "World Map Plot", caption = "Source: Your Data Source")
+  labs(title = "World Map Plot", caption = "Source: Spipoll")
 ggsave("figures/world_map.png", dpi = 300)
 
 # Creating a filtered world map based on the "codes postaux" filtering from data_geofilter.R
 
 # import the datasets as dataframes
-df_spipoll_hors_metropole <- read.csv("data/spipoll_hors_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
-df_spipoll_metropole <- read.csv("data/spipoll_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+df_spipoll_hors_metropole <- read.csv("data/temporary_data/spipoll_hors_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+df_spipoll_metropole <- read.csv("data/temporary_data/spipoll_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 
 # convert the columns longitude and latitude to numeric
 df_spipoll_hors_metropole$longitude <- as.numeric(df_spipoll_hors_metropole$longitude)
@@ -76,7 +76,7 @@ ggplot() +
         axis.ticks = element_blank(),
         axis.text = element_blank(),
         axis.title = element_blank()) +
-  labs(title = "World Map Plot", caption = "Source: Your Data Source")
+  labs(title = "World Map Plot", caption = "Source: Spipoll")
 ggsave("figures/world_map_filtered.png", dpi = 300)
 
 
