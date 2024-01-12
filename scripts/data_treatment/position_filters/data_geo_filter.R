@@ -17,8 +17,8 @@ longitude_ouest <- -5.15
 longitude_est <- 9.325
 
 # import the dataset spipoll_metropole and spipoll_hors_metropole as dataframes
-df_spipoll_metropole <- read.csv("data/spipoll_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
-df_spipoll_hors_metropole <- read.csv("data/spipoll_hors_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+df_spipoll_metropole <- read.csv("data/temporary_data/spipoll_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
+df_spipoll_hors_metropole <- read.csv("data/temporary_data/spipoll_hors_metropole.csv", header = TRUE, sep = ",", stringsAsFactors = FALSE)
 # select the columns "collection_id", "longitude" and "latitude" from df_spipoll_metropole and df_spipoll_hors_metropole
 df_spipoll_metropole <- df_spipoll_metropole %>% select(longitude, latitude, collection_id)
 df_spipoll_hors_metropole <- df_spipoll_hors_metropole %>% select(longitude, latitude, collection_id)
@@ -52,5 +52,5 @@ df_spipoll_metropole <- bind_rows(df_spipoll_metropole, semi_join(df_spipoll_hor
 df_spipoll_hors_metropole <- anti_join(df_spipoll_hors_metropole, within_France_df, by = c("collection_id", "longitude", "latitude"))
 
 # save the 2 dataframes as csv files
-write.csv(df_spipoll_metropole, "data/spipoll_metropole.csv", row.names = FALSE)
-write.csv(df_spipoll_hors_metropole, "data/spipoll_hors_metropole.csv", row.names = FALSE)
+write.csv(df_spipoll_metropole, "data/temporary_data/spipoll_metropole.csv", row.names = FALSE)
+write.csv(df_spipoll_hors_metropole, "data/temporary_data/spipoll_hors_metropole.csv", row.names = FALSE)
