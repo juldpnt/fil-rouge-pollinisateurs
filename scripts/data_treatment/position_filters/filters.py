@@ -6,8 +6,9 @@ def postal_code_filter(
     df_spipoll: "pd.DataFrame", df_poste: "pd.DataFrame", save=False
 ) -> Tuple["pd.DataFrame", "pd.DataFrame"]:
     """
-    Process the dataframes df_spipoll and df_poste to keep only the data of
-    France.
+    Filters the given dataframes based on postal code to later only
+    include the data within Metropolitan France.
+
     This should be used before the geo_filter function.
 
     Args:
