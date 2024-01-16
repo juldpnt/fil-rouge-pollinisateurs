@@ -1,5 +1,6 @@
 import pandas as pd
 from position_filters.filters import postal_code_filter, geo_filter
+
 import os
 
 # If save is True, the filtered dataframes will be saved
@@ -13,13 +14,19 @@ if __name__ == "__main__":
         os.chdir("../../")
 
 # Read the txt data of the 4 files in the folder 'data'
+print("Reading the txt files...")
 df1 = pd.read_csv("data/raw_data/spipoll_1_200k_202311130947.txt", sep="\t")
 df2 = pd.read_csv("data/raw_data/spipoll_200k_400k_202311130949.txt", sep="\t")
-df3 = pd.read_csv("data/raw_data/spipoll_400k_200k_202311130959.txt", sep="\t")
-df4 = pd.read_csv("data/raw_data/spipoll_600k_75k_202311131020.txt", sep="\t")
+df_spipoll = pd.concat([df1, df2])
+del df1, df2
 
-# Merge the 4 dataframes into one
-df_spipoll = pd.concat([df1, df2, df3, df4])
+df3 = pd.read_csv("data/raw_data/spipoll_400k_200k_202311130959.txt", sep="\t")
+df_spipoll = pd.concat([df_spipoll, df3])
+del df3
+
+df4 = pd.read_csv("data/raw_data/spipoll_600k_75k_202311131020.txt", sep="\t")
+df_spipoll = pd.concat([df_spipoll, df4])
+del df4
 
 # Separate the column "coordonnees_GPS" into 2 columns "latitude" and
 # "longitude"
@@ -47,6 +54,7 @@ if save:
     df_spipoll.to_csv("data/temporary_data/spipoll.csv", index=False)
 
 # Apply filters to get which data are in metropolitan France and which are not
+print("Applying filters...")
 df_poste = pd.read_csv(
     "data/governmental_data/datagouv_codespostaux.csv",
     sep=";")
