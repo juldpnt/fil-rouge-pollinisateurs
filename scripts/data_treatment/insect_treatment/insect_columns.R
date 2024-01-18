@@ -8,4 +8,4 @@ data_reduite <- data[colonnes]
 # Renommage des colonnes
 colnames(data_reduite) <- c("insecte_sc", "insecte_fr", "insecte_pp")
 # Enregistrement du tableau
-write.csv(data_reduite, "data/insect_columns.csv", row.names = FALSE)
+write.csv(data_reduite, "scripts/data_treatment/insect_treatment/data_insects/insects.csv", row.names = FALSE)
