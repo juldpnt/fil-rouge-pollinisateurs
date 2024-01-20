@@ -2,7 +2,7 @@ import os
 import sys
 
 
-def setup_env_path():
+def setup_env_path() -> None:
     """
     Add parent directory to working directory
     It permits :

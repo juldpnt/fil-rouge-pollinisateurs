@@ -7,7 +7,8 @@ import os
 Main script to:
 1. Agregate data from the SPIPOLL project
 2. Select relevant data based for metropolitan France
-3. Apply quality processes on plants and insects data to add missing relevant data
+3. Apply quality processes on plants and insects data to add missing relevant 
+data
 """
 
 #####################################################################
@@ -60,8 +61,9 @@ del df4
 
 # Separate the column "coordonnees_GPS" into 2 columns "latitude" and
 # "longitude"
-df_spipoll[["latitude", "longitude"]] = df_spipoll["coordonnees_GPS"].str.split(
-    ", ", expand=True).astype(float)
+df_spipoll[["latitude", "longitude"]] = (
+    df_spipoll["coordonnees_GPS"].str.split(", ", expand=True).astype(float)
+)
 df_spipoll = df_spipoll.drop(columns=["coordonnees_GPS"])
 
 # Remove variables that will never be used in the project
@@ -76,9 +78,8 @@ if save:
 
 # Apply filters to get which data are in metropolitan France and which are not
 print("\n - Applying filters...\n")
-df_poste = pd.read_csv(
-    "data/governmental_data/datagouv_codespostaux.csv",
-    sep=";")
+df_poste = pd.read_csv("data/governmental_data/datagouv_codespostaux.csv",
+                       sep=";")
 metropole_collections, non_metropole_collections = postal_code_filter(
     df_spipoll, df_poste
 )
