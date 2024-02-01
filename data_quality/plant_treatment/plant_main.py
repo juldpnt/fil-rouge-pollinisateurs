@@ -31,26 +31,26 @@ plantes_subset = plantes.drop_duplicates(subset='plante_sc')
 # save as a csv file
 plantes_subset.to_csv("data/plantes/plantes_subset.csv", index=False)
 
-#--------------------------------------------------------------
-# data augmentation
-#--------------------------------------------------------------
+# #--------------------------------------------------------------
+# # data augmentation - code qui n'est plus d'actualité
+# #--------------------------------------------------------------
 
-from plant_functions import calculate_most_common_monograms, convert_monograms_to_set, find_words_in_set
+# from plant_functions import calculate_most_common_monograms, convert_monograms_to_set, find_words_in_set
 
-# Adding a column named data_augmentation to plantes_subset
-plantes_subset.insert(2, 'data_augmentation', [None]*len(plantes_subset))
+# # Adding a column named data_augmentation to plantes_subset
+# plantes_subset.insert(2, 'data_augmentation', [None]*len(plantes_subset))
 
-# Calculate the most common monograms in the column plante_sc
-df_monograms = calculate_most_common_monograms(plantes_subset['plante_sc'])
+# # Calculate the most common monograms in the column plante_sc
+# df_monograms = calculate_most_common_monograms(plantes_subset['plante_sc'])
 
-# Convert the monograms to a set to speed up the matching process
-monograms_set = convert_monograms_to_set(df_monograms)
+# # Convert the monograms to a set to speed up the matching process
+# monograms_set = convert_monograms_to_set(df_monograms)
 
-# Fill in the column data_augmentation with the most common monograms from plante_sc
-plantes_subset['data_augmentation'] = plantes_subset['plante_sc'].apply(lambda x: find_words_in_set(x, monograms_set))
+# # Fill in the column data_augmentation with the most common monograms from plante_sc
+# plantes_subset['data_augmentation'] = plantes_subset['plante_sc'].apply(lambda x: find_words_in_set(x, monograms_set))
 
-# If you want to display the progress of the apply function, you can wrap it with tqdm
-plantes_subset['data_augmentation'] = list(tqdm(plantes_subset['plante_sc'].apply(lambda x: find_words_in_set(x, monograms_set))))
+# # If you want to display the progress of the apply function, you can wrap it with tqdm
+# plantes_subset['data_augmentation'] = list(tqdm(plantes_subset['plante_sc'].apply(lambda x: find_words_in_set(x, monograms_set))))
 
 
 
