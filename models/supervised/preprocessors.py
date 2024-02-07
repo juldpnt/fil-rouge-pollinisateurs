@@ -10,6 +10,7 @@ import numpy as np
 
 from sklearn.base import BaseEstimator, TransformerMixin
 from scipy.spatial import KDTree
+from sklearn.neighbors import BallTree
 
 
 class MetricsCalculator(BaseEstimator, TransformerMixin):
@@ -46,7 +47,7 @@ class MetricsCalculator(BaseEstimator, TransformerMixin):
         Returns:
         - self: MetricsCalculator object.
         """
-        self.tree = KDTree(X[["latitude", "longitude"]].values)
+        self.tree = BallTree(X[["latitude", "longitude"]].values, metric='euclidean')
         return self
 
     def transform(self, X):
@@ -60,15 +61,16 @@ class MetricsCalculator(BaseEstimator, TransformerMixin):
         - X: pandas DataFrame, the transformed data with calculated metrics.
         """
         self.df = X
+        
         X["_temp_indices"] = X.progress_apply(self._get_neighbours, axis=1)
-
-        if self.calculate_unique_insects:
-            print("Calculating unique insects...")
-            X = self.get_specific_richness(X)
 
         if self.calculate_density:
             print("Calculating density...")
             X = self.get_density(X)
+
+        if self.calculate_unique_insects or self.compute_collection_id_density:
+            print("Calculating unique insects...")
+            X = self.get_specific_richness(X)
 
         if self.compute_collection_id_density:
             print("Calculating collection id density...")
@@ -82,19 +84,18 @@ class MetricsCalculator(BaseEstimator, TransformerMixin):
 
         return X
 
-    def _get_neighbours(self, row):
+    def _get_neighbours(self, X):
         """
-        Get the indices of the neighbours within the distance for a given row.
+        Get the indices of the neighbours within the distance for the input data.
 
         Parameters:
-        - row: pandas Series, a row of the input data.
+        - X: pandas DataFrame, the input data.
 
         Returns:
-        - list, the indices of the neighbours within the distance.
+        - list of lists, the indices of the neighbours within the distance for each row.
         """
-        lon = row["longitude"]
-        lat = row["latitude"]
-        indices = self.tree.query_ball_point([lat, lon], self.distance)
+        coords = X[["latitude", "longitude"]].values.reshape(1, -1)
+        indices = self.tree.query_radius(coords, self.distance)
         return indices
 
     def get_specific_richness(self, X):
