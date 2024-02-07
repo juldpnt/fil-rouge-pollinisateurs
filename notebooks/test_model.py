@@ -6,16 +6,16 @@ path = "data/temporary_data/spipoll.csv"
 data = pd.read_csv(path)
 restricted_vars = [
     "collection_id",
-    "plante_sc",
-    "plante_fr",
-    "insecte_sc",
+#    "plante_sc",
+#    "plante_fr",
+#    "insecte_sc",
     "insecte_fr",
-    "temperature",
-    "vent",
+#    "temperature",
+#    "vent",
     "latitude",
     "longitude",
-    "nebulosite",
-    "collection_heure_debut"
+#    "nebulosite",
+#    "collection_heure_debut", 
 ]
 df = data[restricted_vars].copy()
 
@@ -30,3 +30,9 @@ calculator = MetricsCalculator(distance=distance)
 calculator.fit(df)
 
 df_transformed = calculator.transform(df)
+
+import sys
+
+print(df.columns)
+print(sys.getsizeof(df_transformed))
+print(sys.getsizeof(df))

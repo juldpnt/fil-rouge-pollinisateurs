@@ -61,16 +61,15 @@ class MetricsCalculator(BaseEstimator, TransformerMixin):
         - X: pandas DataFrame, the transformed data with calculated metrics.
         """
         self.df = X
-        
         X["_temp_indices"] = X.progress_apply(self._get_neighbours, axis=1)
+
+        if self.calculate_unique_insects:
+            print("Calculating unique insects...")
+            X = self.get_specific_richness(X)
 
         if self.calculate_density:
             print("Calculating density...")
             X = self.get_density(X)
-
-        if self.calculate_unique_insects or self.compute_collection_id_density:
-            print("Calculating unique insects...")
-            X = self.get_specific_richness(X)
 
         if self.compute_collection_id_density:
             print("Calculating collection id density...")
@@ -96,6 +95,7 @@ class MetricsCalculator(BaseEstimator, TransformerMixin):
         """
         coords = X[["latitude", "longitude"]].values.reshape(1, -1)
         indices = self.tree.query_radius(coords, self.distance)
+        indices = np.concatenate(indices)
         return indices
 
     def get_specific_richness(self, X):
