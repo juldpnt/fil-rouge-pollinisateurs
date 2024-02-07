@@ -19,7 +19,7 @@ restricted_vars = [
 ]
 df = data[restricted_vars].copy()
 
-df = data[restricted_vars].copy().sample(frac=0.1, random_state=1)
+df = data[restricted_vars].copy().sample(frac=1, random_state=1)
 df.shape
 
 from models.supervised.preprocessors import MetricsCalculator
@@ -33,6 +33,6 @@ df_transformed = calculator.transform(df)
 
 import sys
 
-print(df.columns)
+print(df_transformed.columns)
 print(sys.getsizeof(df_transformed))
 print(sys.getsizeof(df))

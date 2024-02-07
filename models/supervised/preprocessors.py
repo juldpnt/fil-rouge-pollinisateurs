@@ -7,6 +7,7 @@ TODO: rassembler les calculs d'indices dans une fonction
 
 from tqdm import tqdm
 import numpy as np
+import pandas as pd
 
 from sklearn.base import BaseEstimator, TransformerMixin
 from scipy.spatial import KDTree
@@ -47,73 +48,37 @@ class MetricsCalculator(BaseEstimator, TransformerMixin):
         Returns:
         - self: MetricsCalculator object.
         """
-        self.tree = BallTree(X[["latitude", "longitude"]].values, metric='euclidean')
+        self.tree = BallTree(X[["latitude", "longitude"]].values, metric='euclidean', leaf_size=1500)
         return self
 
     def transform(self, X):
-        """
-        Transform the input data by calculating metrics.
-
-        Parameters:
-        - X: pandas DataFrame, the input data.
-
-        Returns:
-        - X: pandas DataFrame, the transformed data with calculated metrics.
-        """
         self.df = X
-        X["_temp_indices"] = X.progress_apply(self._get_neighbours, axis=1)
+        coords = X[["latitude", "longitude"]].values
+        print("ouf ?")
+        indices_list = self.tree.query_radius(coords, self.distance)
+        print("oui")
+        metrics = []
+        for indices in tqdm(indices_list):
+            metrics.append(self._calculate_metrics(indices))
+
+        metrics_df = pd.DataFrame(metrics)
+        X = pd.concat([X, metrics_df], axis=1)
+
+        return X
+
+    def _calculate_metrics(self, indices):
+        metrics = {}
 
         if self.calculate_unique_insects:
-            print("Calculating unique insects...")
-            X = self.get_specific_richness(X)
+            metrics["specific_richness"] = self.df.iloc[indices]["insecte_fr"].nunique()
 
         if self.calculate_density:
-            print("Calculating density...")
-            X = self.get_density(X)
+            metrics["density"] = len(indices)
 
         if self.compute_collection_id_density:
-            print("Calculating collection id density...")
-            X = self.get_collection_id_density(X)
+            metrics["collection_id_density"] = self.df.iloc[indices]["collection_id"].nunique()
 
-            print("Calculating weighted specific richness...")
-            X = self.get_weighted_specific_richness(X)
+        if self.calculate_unique_insects and self.compute_collection_id_density:
+            metrics["weighted_specific_richness"] = metrics["specific_richness"] / metrics["collection_id_density"]
 
-        print("Done! \n")
-        X = X.drop(columns=["_temp_indices"])
-
-        return X
-
-    def _get_neighbours(self, X):
-        """
-        Get the indices of the neighbours within the distance for the input data.
-
-        Parameters:
-        - X: pandas DataFrame, the input data.
-
-        Returns:
-        - list of lists, the indices of the neighbours within the distance for each row.
-        """
-        coords = X[["latitude", "longitude"]].values.reshape(1, -1)
-        indices = self.tree.query_radius(coords, self.distance)
-        indices = np.concatenate(indices)
-        return indices
-
-    def get_specific_richness(self, X):
-        X["specific_richness"] = X["_temp_indices"].progress_apply(
-            lambda indices: self.df.iloc[indices]["insecte_fr"].nunique()
-        )
-        return X
-
-    def get_density(self, X):
-        X["density"] = X["_temp_indices"].progress_apply(len)
-        return X
-
-    def get_collection_id_density(self, X):
-        X["collection_id_density"] = X["_temp_indices"].progress_apply(
-            lambda indices: self.df.iloc[indices]["collection_id"].nunique()
-        )
-        return X
-
-    def get_weighted_specific_richness(self, X):
-        X["weighted_specific_richness"] = X["specific_richness"] / X["collection_id_density"]
-        return X
+        return metrics
