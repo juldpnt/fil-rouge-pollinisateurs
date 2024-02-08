@@ -19,14 +19,13 @@ restricted_vars = [
 ]
 df = data[restricted_vars].copy()
 
-df = data[restricted_vars].copy().sample(frac=1, random_state=1)
+df = data[restricted_vars].copy().sample(frac=0.5, random_state=1)
 df.shape
 
-from models.supervised.preprocessors import MetricsCalculator
-
+from models.supervised.preprocessors import MetricsCalculatorTree, MetricsCalculatorNaive
 distance = 0.5
 
-calculator = MetricsCalculator(distance=distance)
+calculator = MetricsCalculatorNaive(distance=distance)
 calculator.fit(df)
 
 df_transformed = calculator.transform(df)
