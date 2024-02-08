@@ -19,7 +19,7 @@ restricted_vars = [
 ]
 df = data[restricted_vars].copy()
 
-df = data[restricted_vars].copy().sample(frac=0.5, random_state=1)
+df = data[restricted_vars].copy().sample(frac=1, random_state=1)
 df.shape
 
 from models.supervised.preprocessors import MetricsCalculatorTree, MetricsCalculatorNaive
