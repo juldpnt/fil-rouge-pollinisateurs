@@ -94,7 +94,7 @@ rows_to_remove = df_spipoll["collection_id"].isin(
 )
 df_spipoll = df_spipoll[~rows_to_remove]
 
-df_spipoll.to_csv("data/spipoll.csv", index=False)
+df_spipoll.to_csv("data/temporary_data/spipoll.csv", index=False)
 
 #####################################################################
 # 3. Apply quality processes on plants and insects data to add missing
