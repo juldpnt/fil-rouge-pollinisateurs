@@ -113,13 +113,18 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
 
 class MetricsCalculatorTree(BaseEstimator, TransformerMixin):
     """
-    A class for calculating metrics related to insect data.
+    A class for calculating metrics related to insect data. Not recommended for large datasets but is faster than the naive.
 
     Parameters:
     - distance: float, the distance threshold for calculating metrics.
     - calculate_unique_insects: bool, whether to calculate the number of unique insects within the distance.
     - calculate_density: bool, whether to calculate the density of points within the distance.
     - compute_collection_id_density: bool, whether to calculate the density of collection IDs within the distance.
+    
+    TODO:
+    - change docstring to google format
+    - optimize by doing divide and conquer strategy (maybe ?) by splitting the data into smaller chunks
+    eventhough it might remove certain insects from the calculation
     """
 
     def __init__(
@@ -214,4 +219,48 @@ class MetricsCalculatorTree(BaseEstimator, TransformerMixin):
 
     def get_weighted_specific_richness(self, X):
         X["weighted_specific_richness"] = X["specific_richness"] / X["collection_id_density"]
+        return X
+    
+class HourToCos(BaseEstimator, TransformerMixin):
+    def __init__(self, time_col: str) -> None:
+        """
+        Initialize the HourToCos transformer.
+
+        Args:
+            time_col (str): The name of the column containing the time values.
+
+        Returns:
+            None
+        """
+        self.time_col = time_col
+        
+    def fit(self, X: pd.DataFrame, y=None) -> "TimeToCos":
+        """
+        Fit the transformer to the data.
+
+        Args:
+            X (pd.DataFrame): The input data.
+            y: Ignored.
+
+        Returns:
+            self (TimeToCos): The fitted transformer.
+        """
+        return self
+
+    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+        """
+        Transform the input data by converting the time values to cosine values.
+
+        Args:
+            X (pd.DataFrame): The input data.
+
+        Returns:
+            pd.DataFrame: The transformed data with an additional column containing the cosine values.
+        """
+        
+        new_col = self.time_col + "_cos"
+        X[new_col] = pd.to_datetime(X[self.time_col])
+        X[new_col] = X[new_col].dt.hour + X[new_col].dt.minute / 60
+        X[new_col] = X[new_col] * 2 * np.pi / 24
+        X[new_col] = X[new_col].apply(np.cos)
         return X
