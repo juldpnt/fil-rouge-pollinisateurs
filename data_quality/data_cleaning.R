@@ -20,7 +20,7 @@ df4 <- suppressMessages(read_tsv("data/raw_data/spipoll_600k_75k_202311131020.tx
 df <- rbind(df1, df2, df3, df4)
 
 # Declare unused variables
-unused_vars <- c('collection_nom', 'user_pseudo', 'user_email', 'commentaire', 'photo_lieu', 'distance_ruche', 'collection_heure_fin', 'insecte_photo_1', 'insecte_photo_2', 'date_creation_bdd', 'date_update_bdd')
+unused_vars <- c('user_pseudo', 'user_email', 'commentaire', 'photo_lieu', 'distance_ruche', 'collection_heure_fin', 'insecte_photo_1', 'insecte_photo_2', 'date_creation_bdd', 'date_update_bdd')
 
 # Remove unused variables from the dataframe
 df <- df %>% select(-unused_vars)
@@ -29,7 +29,7 @@ df <- df %>% select(-unused_vars)
 write.csv(df, "data/temporary_data/spipoll_unfiltered.csv", row.names = FALSE)
 
 # Run the script position_filters/run_filters.R
-source("scripts/data_treatment/position_filters/run_filters.R")
+source("data_quality/position_filters/run_filters.R")
 
 ## Modify spipoll.csv by removing the rows whose collection_id are also in spipoll_hors_metropole.csv
 
