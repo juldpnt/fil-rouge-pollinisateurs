@@ -13,27 +13,37 @@ import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.neighbors import BallTree
 
+
 class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
     def __init__(
         self,
         distance: float,
+        insect_col: str = "insecte_fr",
+        collection_id_col: str = "collection_id",
         calculate_unique_insects: bool = True,
         calculate_density: bool = True,
-        compute_collection_id_density: bool = True,
+        compute_weighted_specific_richness: bool = True,
+        clear_intermediate_steps: bool = True,
     ) -> None:
         """
         Initializes a MetricsCalculatorNaive object.
 
         Args:
             distance (float): The distance value.
+            insect_col (str, optional): The column name for the insect. Defaults to "insecte_fr".
+            collection_id_col (str, optional): The column name for the collection ID. Defaults to "collection_id".
             calculate_unique_insects (bool, optional): Whether to calculate unique insects. Defaults to True.
             calculate_density (bool, optional): Whether to calculate density. Defaults to True.
-            compute_collection_id_density (bool, optional): Whether to compute collection ID density. Defaults to True.
+            compute_weighted_specific_richness (bool, optional): Whether to compute collection ID density. Defaults to True.
+            clear_intermediate_steps (bool, optional): Whether to clear the intermediate columns. Defaults to True.
         """
         self.distance = distance
+        self.insect_col = insect_col
+        self.collection_id_col = collection_id_col
         self.calculate_unique_insects = calculate_unique_insects
         self.calculate_density = calculate_density
-        self.compute_collection_id_density = compute_collection_id_density
+        self.compute_weighted_specific_richness  = compute_weighted_specific_richness
+        self.clear_intermediate_steps = clear_intermediate_steps
         tqdm.pandas()
 
     def fit(self, X: pd.DataFrame, y=None) -> "MetricsCalculatorNaive":
@@ -65,7 +75,8 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
             metric = self._calculate_metrics(mask)
             for key, value in metric.items():
                 X.loc[i, key] = value
-
+        if self.clear_intermediate_steps:
+            X = X.drop(columns=["specific_richness", "density", "collection_id_density"])
         return X
 
     def _get_mask(self, row: pd.Series) -> pd.Series:
@@ -95,146 +106,35 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         """
         metrics = {}
 
-        if self.calculate_unique_insects:
-            metrics["specific_richness"] = self.df[mask]["insecte_fr"].nunique()
+        if self.calculate_unique_insects or self.compute_weighted_specific_richness:
+            metrics["specific_richness"] = self.df[mask][self.insect_col].nunique()
 
         if self.calculate_density:
             metrics["density"] = mask.sum()
 
-        if self.compute_collection_id_density:
-            metrics["collection_id_density"] = self.df[mask]["collection_id"].nunique()
-
-        if self.calculate_unique_insects and self.compute_collection_id_density:
+        if self.compute_weighted_specific_richness:
+            metrics["collection_id_density"] = self.df[mask][self.collection_id_col].nunique()
             metrics["weighted_specific_richness"] = (
                 metrics["specific_richness"] / metrics["collection_id_density"]
             )
 
         return metrics
 
-class MetricsCalculatorTree(BaseEstimator, TransformerMixin):
-    """
-    A class for calculating metrics related to insect data. Not recommended for large datasets but is faster than the naive.
 
-    Parameters:
-    - distance: float, the distance threshold for calculating metrics.
-    - calculate_unique_insects: bool, whether to calculate the number of unique insects within the distance.
-    - calculate_density: bool, whether to calculate the density of points within the distance.
-    - compute_collection_id_density: bool, whether to calculate the density of collection IDs within the distance.
-    
-    TODO:
-    - change docstring to google format
-    - optimize by doing divide and conquer strategy (maybe ?) by splitting the data into smaller chunks
-    eventhough it might remove certain insects from the calculation
-    """
-
-    def __init__(
-        self,
-        distance,
-        calculate_unique_insects=True,
-        calculate_density=True,
-        compute_collection_id_density=True,
-    ):
-        self.distance = distance
-        self.calculate_unique_insects = calculate_unique_insects
-        self.calculate_density = calculate_density
-        self.compute_collection_id_density = compute_collection_id_density
-        tqdm.pandas()
-
-    def fit(self, X, y=None):
-        """
-        Fit the metrics calculator to the data.
-
-        Parameters:
-        - X: pandas DataFrame, the input data.
-
-        Returns:
-        - self: MetricsCalculator object.
-        """
-        self.tree = BallTree(X[["latitude", "longitude"]].values, metric='euclidean')
-        return self
-
-    def transform(self, X):
-        """
-        Transform the input data by calculating metrics.
-
-        Parameters:
-        - X: pandas DataFrame, the input data.
-
-        Returns:
-        - X: pandas DataFrame, the transformed data with calculated metrics.
-        """
-        self.df = X
-        X["_temp_indices"] = X.progress_apply(self._get_neighbours, axis=1)
-
-        if self.calculate_unique_insects:
-            print("Calculating unique insects...")
-            X = self.get_specific_richness(X)
-
-        if self.calculate_density:
-            print("Calculating density...")
-            X = self.get_density(X)
-
-        if self.compute_collection_id_density:
-            print("Calculating collection id density...")
-            X = self.get_collection_id_density(X)
-
-            print("Calculating weighted specific richness...")
-            X = self.get_weighted_specific_richness(X)
-
-        print("Done! \n")
-        X = X.drop(columns=["_temp_indices"])
-
-        return X
-
-    def _get_neighbours(self, X):
-        """
-        Get the indices of the neighbours within the distance for the input data.
-
-        Parameters:
-        - X: pandas DataFrame, the input data.
-
-        Returns:
-        - list of lists, the indices of the neighbours within the distance for each row.
-        """
-        coords = X[["latitude", "longitude"]].values.reshape(1, -1)
-        indices = self.tree.query_radius(coords, self.distance)
-        indices = np.concatenate(indices)
-        return indices
-
-    def get_specific_richness(self, X):
-        X["specific_richness"] = X["_temp_indices"].progress_apply(
-            lambda indices: self.df.iloc[indices]["insecte_fr"].nunique()
-        )
-        return X
-
-    def get_density(self, X):
-        X["density"] = X["_temp_indices"].progress_apply(len)
-        return X
-
-    def get_collection_id_density(self, X):
-        X["collection_id_density"] = X["_temp_indices"].progress_apply(
-            lambda indices: self.df.iloc[indices]["collection_id"].nunique()
-        )
-        return X
-
-    def get_weighted_specific_richness(self, X):
-        X["weighted_specific_richness"] = X["specific_richness"] / X["collection_id_density"]
-        return X
-    
 class HourToCos(BaseEstimator, TransformerMixin):
-    def __init__(self, time_col: str) -> None:
+    def __init__(self, hour_col: str) -> None:
         """
         Initialize the HourToCos transformer.
 
         Args:
-            time_col (str): The name of the column containing the time values.
+            hour_col (str): The name of the column containing the time values.
 
         Returns:
             None
         """
-        self.time_col = time_col
-        
-    def fit(self, X: pd.DataFrame, y=None) -> "TimeToCos":
+        self.hour_col = hour_col
+
+    def fit(self, X: pd.DataFrame, y=None) -> "HourToCos":
         """
         Fit the transformer to the data.
 
@@ -257,10 +157,50 @@ class HourToCos(BaseEstimator, TransformerMixin):
         Returns:
             pd.DataFrame: The transformed data with an additional column containing the cosine values.
         """
-        
-        new_col = self.time_col + "_cos"
-        X[new_col] = pd.to_datetime(X[self.time_col])
+
+        new_col = self.hour_col + "_cos"
+        X[new_col] = pd.to_datetime(X[self.hour_col])
         X[new_col] = X[new_col].dt.hour + X[new_col].dt.minute / 60
         X[new_col] = X[new_col] * 2 * np.pi / 24
         X[new_col] = X[new_col].apply(np.cos)
+        return X
+
+class DateToJulian(BaseEstimator, TransformerMixin):
+    def __init__(self, date_col: str) -> None:
+        """
+        Initialize the DateToJulian transformer.
+
+        Args:
+            date_col (str): The name of the column containing the date values.
+
+        Returns:
+            None
+        """
+        self.date_col = date_col
+
+    def fit(self, X: pd.DataFrame, y=None) -> "DateToJulian":
+        """
+        Fit the transformer to the data.
+
+        Args:
+            X (pd.DataFrame): The input data.
+            y: Ignored.
+
+        Returns:
+            self (DateToJulian): The fitted transformer.
+        """
+        return self
+
+    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+        """
+        Transform the input data by converting the date values to Julian days.
+
+        Args:
+            X (pd.DataFrame): The input data.
+
+        Returns:
+            pd.DataFrame: The transformed data with an additional column containing the Julian days.
+        """
+        new_col = self.date_col + "_julian"
+        X[new_col] = pd.to_datetime(X[self.date_col]).apply(lambda x: x.to_julian_date())
         return X
