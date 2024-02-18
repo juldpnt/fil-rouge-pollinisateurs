@@ -1,7 +1,7 @@
-from utils import setup_env_path
+from notebooks.utils import setup_env_path
 import pandas as pd
 
-setup_env_path()
+# setup_env_path()
 path = "data/temporary_data/spipoll.csv"
 data = pd.read_csv(path)
 restricted_vars = [
@@ -19,10 +19,10 @@ restricted_vars = [
 ]
 df = data[restricted_vars].copy()
 
-df = data[restricted_vars].copy().sample(frac=1, random_state=1)
+df = data[restricted_vars].copy().sample(frac=0.1, random_state=1)
 df.shape
 
-from models.supervised.preprocessors import MetricsCalculatorTree, MetricsCalculatorNaive
+from models.supervised.preprocessors import MetricsCalculatorNaive
 distance = 0.5
 
 calculator = MetricsCalculatorNaive(distance=distance)
