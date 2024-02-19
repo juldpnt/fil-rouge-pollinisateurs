@@ -13,6 +13,7 @@ import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.neighbors import BallTree
 
+tqdm.pandas()
 
 class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
     def __init__(
@@ -44,7 +45,6 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         self.calculate_density = calculate_density
         self.compute_weighted_specific_richness = compute_weighted_specific_richness
         self.clear_intermediate_steps = clear_intermediate_steps
-        tqdm.pandas()
 
     def fit(self, X: pd.DataFrame, y=None) -> "MetricsCalculatorNaive":
         """Fit the transformer. This is a placeholder method as this transformer doesn't need to be fitted.
@@ -205,3 +205,19 @@ class DateToJulian(BaseEstimator, TransformerMixin):
         new_col = self.date_col + "_julian"
         X[new_col] = pd.to_datetime(X[self.date_col]).apply(lambda x: x.to_julian_date())
         return X
+    
+def get_df_by_hours(df: pd.DataFrame, time_col: str, hours: List[int], ) -> pd.DataFrame:
+    """
+    Select rows from a dataframe based on a list of hours.
+
+    Args:
+        df (pandas.DataFrame): The input dataframe.
+        time_col (str): The name of the column containing the time values.
+        hours (List[int]): A list of hours to select rows for.
+
+    Returns:
+        pandas.DataFrame: The selected dataframe.
+    """
+    X = df["collection_heure_debut"].copy()
+    X = pd.to_datetime(X)
+    return df[X.dt.hour.isin(hours)]
