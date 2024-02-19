@@ -73,7 +73,7 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         mask = X.progress_apply(self._get_mask, axis=1)
         metrics = mask.progress_apply(self._calculate_metrics)
         for key in metrics.iloc[0].keys():
-            X[key] = metrics.apply(lambda x: x[key])
+            X.loc[:, key] = metrics.apply(lambda x: x[key])
         if self.clear_intermediate_steps:
             X = X.drop(columns=["specific_richness", "density", "collection_id_density"])
         return X
@@ -218,6 +218,22 @@ def get_df_by_hours(df: pd.DataFrame, time_col: str, hours: List[int], ) -> pd.D
     Returns:
         pandas.DataFrame: The selected dataframe.
     """
-    X = df["collection_heure_debut"].copy()
+    X = df[time_col].copy()
     X = pd.to_datetime(X)
     return df[X.dt.hour.isin(hours)]
+
+def get_df_by_months(df: pd.DataFrame, time_col: str, months: List[int]) -> pd.DataFrame:
+    """
+    Select rows from a dataframe based on a list of months.
+
+    Args:
+        df (pandas.DataFrame): The input dataframe.
+        time_col (str): The name of the column containing the time values.
+        months (List[int]): A list of months to select rows for.
+
+    Returns:
+        pandas.DataFrame: The selected dataframe.
+    """
+    X = df[time_col].copy()
+    X = pd.to_datetime(X)
+    return df[X.dt.month.isin(months)]
