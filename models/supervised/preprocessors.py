@@ -42,7 +42,7 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         self.collection_id_col = collection_id_col
         self.calculate_unique_insects = calculate_unique_insects
         self.calculate_density = calculate_density
-        self.compute_weighted_specific_richness  = compute_weighted_specific_richness
+        self.compute_weighted_specific_richness = compute_weighted_specific_richness
         self.clear_intermediate_steps = clear_intermediate_steps
         tqdm.pandas()
 
@@ -70,11 +70,10 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         """
         self.df = X
         print("Calculating metrics...")
-        for i, row in tqdm(X.iterrows(), total=X.shape[0]):
-            mask = self._get_mask(row)
-            metric = self._calculate_metrics(mask)
-            for key, value in metric.items():
-                X.loc[i, key] = value
+        mask = X.progress_apply(self._get_mask, axis=1)
+        metrics = mask.progress_apply(self._calculate_metrics)
+        for key in metrics.iloc[0].keys():
+            X[key] = metrics.apply(lambda x: x[key])
         if self.clear_intermediate_steps:
             X = X.drop(columns=["specific_richness", "density", "collection_id_density"])
         return X
@@ -99,7 +98,7 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         Calculate metrics based on the given indices.
 
         Args:
-            indices (list): The indices of data points within the distance.
+            mask (pd.Series): Boolean mask for filtering data points.
 
         Returns:
             dict: The calculated metrics.
@@ -107,13 +106,15 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         metrics = {}
 
         if self.calculate_unique_insects or self.compute_weighted_specific_richness:
-            metrics["specific_richness"] = self.df[mask][self.insect_col].nunique()
+            insect_col_filtered = self.df.loc[mask, self.insect_col]
+            metrics["specific_richness"] = insect_col_filtered.nunique()
 
         if self.calculate_density:
             metrics["density"] = mask.sum()
 
         if self.compute_weighted_specific_richness:
-            metrics["collection_id_density"] = self.df[mask][self.collection_id_col].nunique()
+            collection_id_col_filtered = self.df.loc[mask, self.collection_id_col]
+            metrics["collection_id_density"] = collection_id_col_filtered.nunique()
             metrics["weighted_specific_richness"] = (
                 metrics["specific_richness"] / metrics["collection_id_density"]
             )
