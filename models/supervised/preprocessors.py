@@ -8,9 +8,7 @@ from typing import List, Dict
 from tqdm import tqdm
 import numpy as np
 import pandas as pd
-
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.neighbors import BallTree
 
 tqdm.pandas()
 
@@ -21,8 +19,8 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         distance: float,
         insect_col: str = "insecte_fr",
         collection_id_col: str = "collection_id",
-        calculate_unique_insects: bool = True,
-        calculate_density: bool = True,
+        compute_unique_insects: bool = True,
+        compute_density: bool = True,
         compute_weighted_specific_richness: bool = True,
         clear_intermediate_steps: bool = True,
     ) -> None:
@@ -33,16 +31,16 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
             distance (float): The distance value.
             insect_col (str, optional): The column name for the insect. Defaults to "insecte_fr".
             collection_id_col (str, optional): The column name for the collection ID. Defaults to "collection_id".
-            calculate_unique_insects (bool, optional): Whether to calculate unique insects. Defaults to True.
-            calculate_density (bool, optional): Whether to calculate density. Defaults to True.
+            compute_unique_insects (bool, optional): Whether to calculate unique insects. Defaults to True.
+            compute_density (bool, optional): Whether to calculate density. Defaults to True.
             compute_weighted_specific_richness (bool, optional): Whether to compute collection ID density. Defaults to True.
             clear_intermediate_steps (bool, optional): Whether to clear the intermediate columns. Defaults to True.
         """
         self.distance = distance
         self.insect_col = insect_col
         self.collection_id_col = collection_id_col
-        self.calculate_unique_insects = calculate_unique_insects
-        self.calculate_density = calculate_density
+        self.compute_unique_insects = compute_unique_insects
+        self.compute_density = compute_density
         self.compute_weighted_specific_richness = compute_weighted_specific_richness
         self.clear_intermediate_steps = clear_intermediate_steps
 
@@ -58,7 +56,7 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         """
         return self
 
-    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+    def transform(self, X: pd.DataFrame) -> "pd.DataFrame":
         """
         Transforms the input data by calculating metrics.
 
@@ -72,15 +70,17 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         print("Calculating metrics...")
         mask = X.progress_apply(self._get_mask, axis=1)
         metrics = mask.progress_apply(self._calculate_metrics)
+
         for key in metrics.iloc[0].keys():
             X.loc[:, key] = metrics.apply(lambda x: x[key])
+
         if self.clear_intermediate_steps:
             columns_to_drop = ["specific_richness", "density", "collection_id_density"]
             columns_to_drop = [col for col in columns_to_drop if col in X.columns]
             X = X.drop(columns=columns_to_drop)
         return X
 
-    def _get_mask(self, row: pd.Series) -> pd.Series:
+    def _get_mask(self, row: pd.Series) -> "pd.Series":
         """
         Returns a boolean mask with rows within the specified distance.
 
@@ -107,11 +107,11 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         """
         metrics = {}
 
-        if self.calculate_unique_insects or self.compute_weighted_specific_richness:
+        if self.compute_unique_insects or self.compute_weighted_specific_richness:
             insect_col_filtered = self.df.loc[mask, self.insect_col]
             metrics["specific_richness"] = insect_col_filtered.nunique()
 
-        if self.calculate_density:
+        if self.compute_density:
             metrics["density"] = mask.sum()
 
         if self.compute_weighted_specific_richness:
@@ -150,7 +150,7 @@ class HourToCos(BaseEstimator, TransformerMixin):
         """
         return self
 
-    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+    def transform(self, X: pd.DataFrame) -> "pd.DataFrame":
         """
         Transform the input data by converting the time values to cosine values.
 
@@ -195,7 +195,7 @@ class DateToJulian(BaseEstimator, TransformerMixin):
         """
         return self
 
-    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
+    def transform(self, X: pd.DataFrame) -> "pd.DataFrame":
         """
         Transform the input data by converting the date values to Julian days.
 
@@ -216,7 +216,7 @@ def get_df_by_hours(
     df: pd.DataFrame,
     time_col: str,
     hours: List[int],
-) -> pd.DataFrame:
+) -> "pd.DataFrame":
     """
     Select rows from a dataframe based on a list of hours.
 
@@ -235,7 +235,7 @@ def get_df_by_hours(
 
 def get_df_by_months(
     df: pd.DataFrame, time_col: str, months: List[int]
-) -> pd.DataFrame:
+) -> "pd.DataFrame":
     """
     Select rows from a dataframe based on a list of months.
 
@@ -250,3 +250,33 @@ def get_df_by_months(
     X = df[time_col].copy()
     X = pd.to_datetime(X, format="ISO8601")
     return df[X.dt.month.isin(months)]
+
+def random_sample_mask(
+    df: pd.DataFrame,
+    column_name: str,
+    min_threshold: float,
+    max_threshold: float,
+    sample_percentage: float,
+) -> "pd.DataFrame":
+    """
+    Generate a random sample mask for filtering a DataFrame.
+
+    Args:
+        df (pandas.DataFrame): The input dataframe
+        column_name (str): The name of the column to apply the mask
+        min_threshold (float): The minimum threshold value for the mask
+        max_threshold (float): The maximum threshold value for the mask
+        sample_percentage (float): The percentage of the sample to be taken
+
+    Returns:
+        pandas.DataFrame: The filtered DataFrame based on the random sample mask
+    """
+    mask = (df[column_name] > min_threshold) & (df[column_name] < max_threshold)
+    sample_indices = np.random.choice(
+        df[mask].index,
+        size=int(np.count_nonzero(mask) * sample_percentage),
+         replace=False,
+    )
+    mask[sample_indices] = False
+    df_filtered = df[~mask]
+    return df_filtered
