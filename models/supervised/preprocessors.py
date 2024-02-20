@@ -2,7 +2,6 @@
 preprocessors.py
 
 TODO: Add description
-TODO: rassembler les calculs d'indices dans une fonction
 """
 
 from typing import List, Dict
@@ -14,6 +13,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.neighbors import BallTree
 
 tqdm.pandas()
+
 
 class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
     def __init__(
@@ -75,7 +75,9 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
         for key in metrics.iloc[0].keys():
             X.loc[:, key] = metrics.apply(lambda x: x[key])
         if self.clear_intermediate_steps:
-            X = X.drop(columns=["specific_richness", "density", "collection_id_density"])
+            columns_to_drop = ["specific_richness", "density", "collection_id_density"]
+            columns_to_drop = [col for col in columns_to_drop if col in X.columns]
+            X = X.drop(columns=columns_to_drop)
         return X
 
     def _get_mask(self, row: pd.Series) -> pd.Series:
@@ -166,6 +168,7 @@ class HourToCos(BaseEstimator, TransformerMixin):
         X[new_col] = X[new_col].apply(np.cos)
         return X
 
+
 class DateToJulian(BaseEstimator, TransformerMixin):
     def __init__(self, date_col: str) -> None:
         """
@@ -203,10 +206,17 @@ class DateToJulian(BaseEstimator, TransformerMixin):
             pd.DataFrame: The transformed data with an additional column containing the Julian days.
         """
         new_col = self.date_col + "_julian"
-        X[new_col] = pd.to_datetime(X[self.date_col]).apply(lambda x: x.to_julian_date())
+        X[new_col] = pd.to_datetime(X[self.date_col], format="ISO8601").apply(
+            lambda x: x.to_julian_date()
+        )
         return X
-    
-def get_df_by_hours(df: pd.DataFrame, time_col: str, hours: List[int], ) -> pd.DataFrame:
+
+
+def get_df_by_hours(
+    df: pd.DataFrame,
+    time_col: str,
+    hours: List[int],
+) -> pd.DataFrame:
     """
     Select rows from a dataframe based on a list of hours.
 
@@ -219,10 +229,13 @@ def get_df_by_hours(df: pd.DataFrame, time_col: str, hours: List[int], ) -> pd.D
         pandas.DataFrame: The selected dataframe.
     """
     X = df[time_col].copy()
-    X = pd.to_datetime(X)
+    X = pd.to_datetime(X, format="ISO8601")
     return df[X.dt.hour.isin(hours)]
 
-def get_df_by_months(df: pd.DataFrame, time_col: str, months: List[int]) -> pd.DataFrame:
+
+def get_df_by_months(
+    df: pd.DataFrame, time_col: str, months: List[int]
+) -> pd.DataFrame:
     """
     Select rows from a dataframe based on a list of months.
 
@@ -235,5 +248,5 @@ def get_df_by_months(df: pd.DataFrame, time_col: str, months: List[int]) -> pd.D
         pandas.DataFrame: The selected dataframe.
     """
     X = df[time_col].copy()
-    X = pd.to_datetime(X)
+    X = pd.to_datetime(X, format="ISO8601")
     return df[X.dt.month.isin(months)]
