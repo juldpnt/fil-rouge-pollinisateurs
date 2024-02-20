@@ -1,0 +1,17 @@
+name: fil-rouge-pollinisateurs
+channels:
+  - python
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - numpy
+    - pandas
+    - matplotlib
+    - scikit-learn
+    - jupyter
+    - seaborn
+    - scipy
+    - missingno
+    - plotly
