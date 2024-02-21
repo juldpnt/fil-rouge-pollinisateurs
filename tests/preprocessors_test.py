@@ -1,7 +1,7 @@
 import pytest
 import pandas as pd
-from models.supervised.preprocessors import MetricsCalculatorNaive
-from models.supervised.preprocessors import (
+from models.preprocessors import MetricsCalculatorNaive
+from models.preprocessors import (
     HourToCos,
     DateToJulian,
     get_df_by_hours,
