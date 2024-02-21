@@ -11,71 +11,25 @@ import numpy as np
 import pandas as pd
 from IPython.display import display, HTML
 
-
-def create_pipeline(
-    numeric_features: List[str],
-    categorical_features: List[str],
-    ordinal_features: List[str],
-    nominal_features: List[str],
-) -> Pipeline:
-    """Create and return a scikit-learn pipeline for preprocessing and regression.
-
-    Args:
-        numeric_features (List[str]): List of numeric feature names.
-        categorical_features (List[str]): List of categorical feature names.
-        ordinal_features (List[str]): List of ordinal feature names.
-        nominal_features (List[str]): List of nominal feature names.
-    Returns:
-       Pipeline: A scikit-learn pipeline for preprocessing and regression.
-    """
-    numeric_pipeline = Pipeline(
-        steps=[("scaler", StandardScaler()), ("imputer", KNNImputer(n_neighbors=5))]
-    )
-
-    ordinal_pipeline = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="most_frequent")),
-            ("encoder", OrdinalEncoder()),
-        ]
-    )
-    nominal_pipeline = Pipeline(
-        steps=[
-            ("imputer", SimpleImputer(strategy="most_frequent")),
-            ("encoder", OneHotEncoder(handle_unknown="ignore")),
-        ]
-    )
-
-    categorical_pipeline = ColumnTransformer(
-        transformers=[
-            ("ordinal", ordinal_pipeline, ordinal_features),
-            ("nominal", nominal_pipeline, nominal_features),
-        ],
-        remainder="drop",
-    )
-
-    preprocessor = ColumnTransformer(
-        transformers=[
-            ("numerical", numeric_pipeline, numeric_features),
-            ("categorical", categorical_pipeline, categorical_features),
-        ],
-        remainder="drop",
-    )
-
-    estimator = RandomForestRegressor(random_state=1)
-
-    pipe = Pipeline(steps=[("preprocessor", preprocessor), ("estimator", estimator)])
-    return pipe
-
-
 class CustomPipeline:
     def __init__(
         self,
-        estimator,
         numeric_features: List[str],
         categorical_features: List[str],
         ordinal_features: List[str],
         nominal_features: List[str],
+        estimator = RandomForestRegressor(),
     ):
+        """
+        Initialize the class with the given estimator and feature lists.
+
+        Args:
+            numeric_features (List[str]): List of numeric feature names.
+            categorical_features (List[str]): List of categorical feature names.
+            ordinal_features (List[str]): List of ordinal feature names.
+            nominal_features (List[str]): List of nominal feature names.
+            estimator: The machine learning estimator to be used.
+        """
         self.estimator = estimator
         self.numeric_features = numeric_features
         self.categorical_features = categorical_features
