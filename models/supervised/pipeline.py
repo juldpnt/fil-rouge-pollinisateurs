@@ -101,3 +101,4 @@ class CustomPipeline:
         except:
             feature_importance = pd.DataFrame()
         
+        return feature_importance
