@@ -103,7 +103,6 @@ class CustomPipeline:
             feature_importance = pd.DataFrame(
                 {"feature": feature_names, "importance (%)": importance * 100}
             ).sort_values("importance", ascending=False)
-        except:
+        except AttributeError:
             feature_importance = pd.DataFrame()
-
         return feature_importance

@@ -349,10 +349,10 @@ class TrainTestUnderSampler:
 
     def preprocess(self, X, y):
         """
-        Split the data into training and testing sets. 
-        Apply random sample mask with different thresholds and sample percentages. 
+        Split the data into training and testing sets.
+        Apply random sample mask with different thresholds and sample percentages.
         Returns the preprocessed training and testing data.
-        
+
         Args:
             X (array-like): The input features.
             y (array-like): The target values.
