@@ -4,12 +4,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import SimpleImputer, KNNImputer, IterativeImputer
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Lasso, Ridge
+from sklearn.feature_selection import SelectFromModel
+
 
 from typing import List
 import numpy as np
 import pandas as pd
 from IPython.display import display, HTML
+
 
 class CustomPipeline:
     def __init__(
@@ -18,7 +21,7 @@ class CustomPipeline:
         categorical_features: List[str],
         ordinal_features: List[str],
         nominal_features: List[str],
-        estimator = RandomForestRegressor(),
+        estimator=RandomForestRegressor(),
     ):
         """
         Initialize the class with the given estimator and feature lists.
@@ -71,10 +74,16 @@ class CustomPipeline:
             remainder="drop",
         )
 
+        feature_selector = SelectFromModel(estimator=Ridge())
+
         estimator = self.estimator
 
         pipe = Pipeline(
-            steps=[("preprocessor", preprocessor), ("estimator", estimator)]
+            steps=[
+                ("preprocessor", preprocessor),
+                ("feature_selector", feature_selector),
+                ("estimator", estimator),
+            ]
         )
         return pipe
 
@@ -92,13 +101,12 @@ class CustomPipeline:
             raise ValueError("The pipeline has not been fitted yet.")
         try:
             importance = self.pipeline.named_steps["estimator"].feature_importances_
-            # use passthrough step to get the features names
             feature_names = self.pipeline.steps[0][1].get_feature_names_out()
 
             feature_importance = pd.DataFrame(
-                {"feature": feature_names, "importance": importance}
+                {"feature": feature_names, "importance (%)": importance * 100}
             ).sort_values("importance", ascending=False)
         except:
             feature_importance = pd.DataFrame()
-        
+
         return feature_importance
