@@ -1,12 +1,9 @@
-import pytest
 import pandas as pd
-from models.preprocessors import MetricsCalculatorNaive
-from models.preprocessors import (
-    HourToCos,
-    DateToJulian,
-    get_df_by_hours,
-    get_df_by_months,
-)
+import pytest
+
+from models.preprocessors import (DateToJulian, HourToCos,
+                                  MetricsCalculatorNaive, get_df_by_hours,
+                                  get_df_by_months)
 
 
 @pytest.fixture

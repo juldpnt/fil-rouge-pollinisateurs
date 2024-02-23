@@ -1,17 +1,14 @@
-from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import SimpleImputer, KNNImputer, IterativeImputer
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.linear_model import LinearRegression, Lasso, Ridge
-from sklearn.feature_selection import SelectFromModel
-
-
 from typing import List
-import numpy as np
+
 import pandas as pd
-from IPython.display import display, HTML
+from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.feature_selection import SelectFromModel
+from sklearn.impute import IterativeImputer, KNNImputer, SimpleImputer
+from sklearn.linear_model import Lasso, LinearRegression, Ridge
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, StandardScaler
 
 
 class CustomPipeline:
