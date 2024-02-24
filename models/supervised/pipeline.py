@@ -19,7 +19,8 @@ class CustomPipeline:
         categorical_features: List[str],
         ordinal_features: List[str],
         nominal_features: List[str],
-        estimator=RandomForestRegressor(),
+        estimator=RandomForestRegressor(random_state=1),
+        feature_selection : bool = True,
     ):
         """
         Initialize the class with the given estimator and feature lists.
@@ -29,6 +30,7 @@ class CustomPipeline:
             categorical_features (List[str]): List of categorical feature names.
             ordinal_features (List[str]): List of ordinal feature names.
             nominal_features (List[str]): List of nominal feature names.
+            feature_selection (bool, optional): Whether to use feature selection. Defaults to True.
             estimator: The machine learning estimator to be used.
         """
         self.estimator = estimator
@@ -36,8 +38,9 @@ class CustomPipeline:
         self.categorical_features = categorical_features
         self.ordinal_features = ordinal_features
         self.nominal_features = nominal_features
+        self.feature_selection = feature_selection
         self.pipeline = self._create_pipeline()
-
+        
     def _create_pipeline(self) -> "Pipeline":
         numeric_pipeline = Pipeline(
             steps=[("scaler", StandardScaler()), ("imputer", KNNImputer(n_neighbors=5))]
@@ -71,9 +74,10 @@ class CustomPipeline:
             ],
             remainder="drop",
         )
-
-        feature_selector = SelectFromModel(estimator=Ridge())
-
+        if self.feature_selection:
+            feature_selector = SelectFromModel(estimator=Ridge())
+        else:
+            feature_selector = "passthrough"
         estimator = self.estimator
 
         pipe = Pipeline(
@@ -92,21 +96,6 @@ class CustomPipeline:
 
     def predict(self, X: pd.DataFrame) -> "pd.Series":
         return self.pipeline.predict(X)
-
-    def calculate_feature_importance(self) -> "pd.DataFrame":
-        # check if the pipeline has been fitted
-        if not (hasattr(self, "fitted")) or not (self.fitted):
-            raise ValueError("The pipeline has not been fitted yet.")
-        try:
-            importance = self.pipeline.named_steps["estimator"].feature_importances_
-            feature_names = self.pipeline.steps[0][1].get_feature_names_out()
-
-            feature_importance = pd.DataFrame(
-                {"feature": feature_names, "importance (%)": importance * 100}
-            ).sort_values("importance (%)", ascending=False)
-        except AttributeError:
-            feature_importance = pd.DataFrame()
-        return feature_importance
 
     def score(self, X: pd.DataFrame, y: pd.Series) -> float:
         return self.pipeline.score(X, y)
