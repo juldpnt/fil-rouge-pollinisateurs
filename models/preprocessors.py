@@ -4,16 +4,34 @@ preprocessors.py
 TODO: Add description
 """
 
-from typing import List, Dict
-from tqdm import tqdm
+from typing import Dict, List
+
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.model_selection import train_test_split
+from tqdm import tqdm
 
 tqdm.pandas()
 
 
 class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
+    """
+    Calculates metrics based on the provided distance value using a naive approach.
+
+    The following metrics are calculated:
+
+    * Specific richness: the number of unique insects
+    * Density: the number of insects in a given area
+    * Collection ID density: the number of unique collection IDs in a given area
+    * Weighted specific richness: specific richness per collection ID density
+
+    This is done by comparing the coordinates of each data point and finding all
+    points that are within the specified distance.
+
+    The transformer can be configured to calculate only the required metrics.
+    """
+
     def __init__(
         self,
         distance: float,
@@ -67,7 +85,7 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
             pandas.DataFrame: The transformed data with calculated metrics.
         """
         self.df = X
-        print("Calculating metrics...")
+        print("Calculating metrics:\n--------------------\n")
         mask = X.progress_apply(self._get_mask, axis=1)
         metrics = mask.progress_apply(self._calculate_metrics)
 
@@ -212,6 +230,19 @@ class DateToJulian(BaseEstimator, TransformerMixin):
         return X
 
 
+def split_in_dummies(
+    df: pd.DataFrame,
+    column_name: str,
+    sep: str = ",",
+):
+    """
+    Split a column in dummy columns.
+    """
+    df_dummies = df[column_name].str.get_dummies(sep)
+    df = pd.concat([df, df_dummies], axis=1)
+    return df, list(df_dummies.columns)
+
+
 def get_df_by_hours(
     df: pd.DataFrame,
     time_col: str,
@@ -251,12 +282,14 @@ def get_df_by_months(
     X = pd.to_datetime(X, format="ISO8601")
     return df[X.dt.month.isin(months)]
 
+
 def random_sample_mask(
     df: pd.DataFrame,
     column_name: str,
     min_threshold: float,
     max_threshold: float,
     sample_percentage: float,
+    random_state: int = 0,
 ) -> "pd.DataFrame":
     """
     Generate a random sample mask for filtering a DataFrame.
@@ -267,16 +300,84 @@ def random_sample_mask(
         min_threshold (float): The minimum threshold value for the mask
         max_threshold (float): The maximum threshold value for the mask
         sample_percentage (float): The percentage of the sample to be taken
+        random_state (int, optional): The seed for the random number generator
 
     Returns:
         pandas.DataFrame: The filtered DataFrame based on the random sample mask
     """
+    rng = np.random.default_rng(random_state)
     mask = (df[column_name] > min_threshold) & (df[column_name] < max_threshold)
-    sample_indices = np.random.choice(
+    sample_indices = rng.choice(
         df[mask].index,
         size=int(np.count_nonzero(mask) * sample_percentage),
-         replace=False,
+        replace=False,
     )
     mask[sample_indices] = False
     df_filtered = df[~mask]
     return df_filtered
+
+
+class TrainTestUnderSampler:
+    """
+    TrainTestUnderSampler is a preprocessor that applies random under-sampling to the training data,
+    and then splits the resulting dataset into training and testing sets.
+    """
+
+    def __init__(
+        self,
+        column_name: str,
+        min_thresholds: List[float],
+        max_thresholds: List[float],
+        sample_percentages: List[float],
+        random_state: int = 1,
+    ) -> None:
+        """
+        Initializes the instance with the specified column name, minimum thresholds, maximum thresholds, sample percentages, and optional random state.
+
+        Args:
+            column_name (str): The name of the column.
+            min_thresholds (List[float]): The list of minimum thresholds.
+            max_thresholds (List[float]): The list of maximum thresholds.
+            sample_percentages (List[float]): The list of sample percentages.
+            random_state (int, optional): The random state for reproducibility. Default is 1.
+        """
+        self.column_name = column_name
+        self.min_thresholds = min_thresholds
+        self.max_thresholds = max_thresholds
+        self.sample_percentages = sample_percentages
+        self.random_state = random_state
+
+    def preprocess(self, X, y):
+        """
+        Split the data into training and testing sets.
+        Apply random sample mask with different thresholds and sample percentages.
+        Returns the preprocessed training and testing data.
+
+        Args:
+            X (array-like): The input features.
+            y (array-like): The target values.
+        Returns:
+            tuple: Preprocessed training and testing data (X_train, X_test, y_train, y_test).
+        """
+        # Split the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=self.random_state
+        )
+
+        # Apply random sample mask with different thresholds and sample percentages
+        for min_thresh, max_thresh, sample_percentage in zip(
+            self.min_thresholds, self.max_thresholds, self.sample_percentages
+        ):
+            X_temp = pd.concat([X_train, y_train], axis=1)
+            X_temp = random_sample_mask(
+                X_temp,
+                self.column_name,
+                min_thresh,
+                max_thresh,
+                sample_percentage,
+                random_state=self.random_state,
+            )
+            X_train = X_temp.drop(columns=[self.column_name], axis=1)
+            y_train = X_temp[self.column_name]
+
+        return X_train, X_test, y_train, y_test

@@ -15,3 +15,7 @@ dependencies:
     - scipy
     - missingno
     - plotly
+    - geopandas
+    - tqdm
+    - mlxtend
+    - gdown
