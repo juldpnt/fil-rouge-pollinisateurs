@@ -18,3 +18,4 @@ dependencies:
     - geopandas
     - tqdm
     - mlxtend
+    - gdown

@@ -9,6 +9,7 @@ from sklearn.impute import IterativeImputer, KNNImputer, SimpleImputer
 from sklearn.linear_model import Lasso, LinearRegression, Ridge
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, StandardScaler
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 
 class CustomPipeline:
@@ -102,7 +103,23 @@ class CustomPipeline:
 
             feature_importance = pd.DataFrame(
                 {"feature": feature_names, "importance (%)": importance * 100}
-            ).sort_values("importance", ascending=False)
+            ).sort_values("importance (%)", ascending=False)
         except AttributeError:
             feature_importance = pd.DataFrame()
         return feature_importance
+
+    def score(self, X: pd.DataFrame, y: pd.Series) -> float:
+        return self.pipeline.score(X, y)
+
+    def get_metrics(self, X: pd.DataFrame, y: pd.Series):
+        # return R2, MSE, MAE metrics
+        y_pred = self.predict(X)
+        r2 = r2_score(y, y_pred)
+        mse = mean_squared_error(y, y_pred)
+        mae = mean_absolute_error(y, y_pred)
+
+        print(f"R2: {r2}")
+        print(f"MSE: {mse}")
+        print(f"MAE: {mae}")
+
+        return r2, mse, mae

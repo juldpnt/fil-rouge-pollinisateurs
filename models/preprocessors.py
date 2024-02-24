@@ -85,7 +85,7 @@ class MetricsCalculatorNaive(BaseEstimator, TransformerMixin):
             pandas.DataFrame: The transformed data with calculated metrics.
         """
         self.df = X
-        print("Calculating metrics...")
+        print("Calculating metrics:\n--------------------\n")
         mask = X.progress_apply(self._get_mask, axis=1)
         metrics = mask.progress_apply(self._calculate_metrics)
 
