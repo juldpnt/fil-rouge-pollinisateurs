@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_97c7cdee05173b75c6ace6ec1496ef35 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_97c7cdee05173b75c6ace6ec1496ef35" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_97c7cdee05173b75c6ace6ec1496ef35 = L.map(
+                "map_97c7cdee05173b75c6ace6ec1496ef35",
+                {
+                    center: [46.11372280254496, 1.8973206185962128],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1d7712a11b07505bfe7739ba35d1856d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_1d7712a11b07505bfe7739ba35d1856d.addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var marker_61796479762fda8a3e94d3752b2ae12d = L.marker(
+                [48.837367976118294, 2.3850581739742176],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_c7c9ce3c189b03dbcdc6e2250fd0d1e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_61796479762fda8a3e94d3752b2ae12d.setIcon(icon_c7c9ce3c189b03dbcdc6e2250fd0d1e8);
+        
+    
+        var popup_89353bdc087d86ba352caaadf018aba1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c0f0dfd630404b387f21b8a30606c50 = $(`<div id="html_3c0f0dfd630404b387f21b8a30606c50" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.97</div>`)[0];
+                popup_89353bdc087d86ba352caaadf018aba1.setContent(html_3c0f0dfd630404b387f21b8a30606c50);
+            
+        
+
+        marker_61796479762fda8a3e94d3752b2ae12d.bindPopup(popup_89353bdc087d86ba352caaadf018aba1)
+        ;
+
+        
+    
+    
+            var marker_4be371927fe003d6ba9bcb6b856aaa6a = L.marker(
+                [44.81973501564899, -0.5808458543298344],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_1d82302fb08f9d7db97ef8f002d67bfe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_4be371927fe003d6ba9bcb6b856aaa6a.setIcon(icon_1d82302fb08f9d7db97ef8f002d67bfe);
+        
+    
+        var popup_7b3abc7cba2e1711a5550286b070cd46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc30c6866b24733832bca7c83a9af6cc = $(`<div id="html_dc30c6866b24733832bca7c83a9af6cc" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.89</div>`)[0];
+                popup_7b3abc7cba2e1711a5550286b070cd46.setContent(html_dc30c6866b24733832bca7c83a9af6cc);
+            
+        
+
+        marker_4be371927fe003d6ba9bcb6b856aaa6a.bindPopup(popup_7b3abc7cba2e1711a5550286b070cd46)
+        ;
+
+        
+    
+    
+            var marker_c91c0306bae0bc378cd6c89547d52fdc = L.marker(
+                [44.98941851809003, 1.0232131672181335],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_55d260674b3d845a2a5ad8f4795e4b90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c91c0306bae0bc378cd6c89547d52fdc.setIcon(icon_55d260674b3d845a2a5ad8f4795e4b90);
+        
+    
+        var popup_90c91510ed02a3f2c22536df5b9cf040 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_669ba339bc6b4566e8c3e1b6361b7973 = $(`<div id="html_669ba339bc6b4566e8c3e1b6361b7973" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.66</div>`)[0];
+                popup_90c91510ed02a3f2c22536df5b9cf040.setContent(html_669ba339bc6b4566e8c3e1b6361b7973);
+            
+        
+
+        marker_c91c0306bae0bc378cd6c89547d52fdc.bindPopup(popup_90c91510ed02a3f2c22536df5b9cf040)
+        ;
+
+        
+    
+    
+            var marker_e8887d5ea1ec64dfd6d30f30152967ae = L.marker(
+                [48.18149102603241, -1.6947602738750716],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_feb96a5170e96ea879931656e8bceff6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e8887d5ea1ec64dfd6d30f30152967ae.setIcon(icon_feb96a5170e96ea879931656e8bceff6);
+        
+    
+        var popup_e5447a0b1dccc2e18186c9b21c90c305 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_598bbe1a4780fcc366f96241a6e9f6e1 = $(`<div id="html_598bbe1a4780fcc366f96241a6e9f6e1" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.63</div>`)[0];
+                popup_e5447a0b1dccc2e18186c9b21c90c305.setContent(html_598bbe1a4780fcc366f96241a6e9f6e1);
+            
+        
+
+        marker_e8887d5ea1ec64dfd6d30f30152967ae.bindPopup(popup_e5447a0b1dccc2e18186c9b21c90c305)
+        ;
+
+        
+    
+    
+            var marker_c12497eb664617cab28fd89dc3cdcc55 = L.marker(
+                [45.057354527265616, 4.508743535248167],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_deba35780bddda7537c2d2e76aeb9f18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c12497eb664617cab28fd89dc3cdcc55.setIcon(icon_deba35780bddda7537c2d2e76aeb9f18);
+        
+    
+        var popup_f0a8384facd368b4d283e645a1a6ca7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1895efbc5eb2e4cda99bb84376b65039 = $(`<div id="html_1895efbc5eb2e4cda99bb84376b65039" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.30</div>`)[0];
+                popup_f0a8384facd368b4d283e645a1a6ca7b.setContent(html_1895efbc5eb2e4cda99bb84376b65039);
+            
+        
+
+        marker_c12497eb664617cab28fd89dc3cdcc55.bindPopup(popup_f0a8384facd368b4d283e645a1a6ca7b)
+        ;
+
+        
+    
+    
+            var marker_aea5560a85e4d467d97899b27bfeeae0 = L.marker(
+                [44.70877182631821, 4.588194930761478],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_f80356d9e5e7aa5de6fc41f2ecb45805 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_aea5560a85e4d467d97899b27bfeeae0.setIcon(icon_f80356d9e5e7aa5de6fc41f2ecb45805);
+        
+    
+        var popup_49fee623e7e96f39979a1e87c4536b0c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dbcd8cf4d1e07a16d19b23bc85efc6f1 = $(`<div id="html_dbcd8cf4d1e07a16d19b23bc85efc6f1" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.30</div>`)[0];
+                popup_49fee623e7e96f39979a1e87c4536b0c.setContent(html_dbcd8cf4d1e07a16d19b23bc85efc6f1);
+            
+        
+
+        marker_aea5560a85e4d467d97899b27bfeeae0.bindPopup(popup_49fee623e7e96f39979a1e87c4536b0c)
+        ;
+
+        
+    
+    
+            var marker_98cff29d4b74bc33b6863836c724aab3 = L.marker(
+                [44.19448268264385, 3.924803069436931],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_6df38234a77340ecfe7f390078a716f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_98cff29d4b74bc33b6863836c724aab3.setIcon(icon_6df38234a77340ecfe7f390078a716f0);
+        
+    
+        var popup_c325650023e56b1bafcc1db7124a30a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a27d7e2e71e1b79bb018ffdd80ceb88 = $(`<div id="html_1a27d7e2e71e1b79bb018ffdd80ceb88" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.39</div>`)[0];
+                popup_c325650023e56b1bafcc1db7124a30a6.setContent(html_1a27d7e2e71e1b79bb018ffdd80ceb88);
+            
+        
+
+        marker_98cff29d4b74bc33b6863836c724aab3.bindPopup(popup_c325650023e56b1bafcc1db7124a30a6)
+        ;
+
+        
+    
+    
+            var marker_89ce10d8856590ac27e149a7cd59f3c7 = L.marker(
+                [48.91065354669179, 2.0429579148651604],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_1d39da47b3807c02c0db9c96ea2e69fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_89ce10d8856590ac27e149a7cd59f3c7.setIcon(icon_1d39da47b3807c02c0db9c96ea2e69fc);
+        
+    
+        var popup_132b99d491625a0935bbe399f951e380 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_709267c9ce2cbc29657ec7143d88ace7 = $(`<div id="html_709267c9ce2cbc29657ec7143d88ace7" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.54</div>`)[0];
+                popup_132b99d491625a0935bbe399f951e380.setContent(html_709267c9ce2cbc29657ec7143d88ace7);
+            
+        
+
+        marker_89ce10d8856590ac27e149a7cd59f3c7.bindPopup(popup_132b99d491625a0935bbe399f951e380)
+        ;
+
+        
+    
+    
+            var marker_5f25cdc41f003ea8d68bea7cd89a337b = L.marker(
+                [45.38627927580852, 5.1612755177057865],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_ffe25927f1a61757f2ba6ba42b047a7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_5f25cdc41f003ea8d68bea7cd89a337b.setIcon(icon_ffe25927f1a61757f2ba6ba42b047a7f);
+        
+    
+        var popup_c389812be800f9596957bb6abfbd63eb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f2c9013a07c748eb31208dfd98258cd = $(`<div id="html_1f2c9013a07c748eb31208dfd98258cd" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.16</div>`)[0];
+                popup_c389812be800f9596957bb6abfbd63eb.setContent(html_1f2c9013a07c748eb31208dfd98258cd);
+            
+        
+
+        marker_5f25cdc41f003ea8d68bea7cd89a337b.bindPopup(popup_c389812be800f9596957bb6abfbd63eb)
+        ;
+
+        
+    
+    
+            var marker_e4656c8eded7b5c28fae89dc217a493f = L.marker(
+                [43.12650125541405, 5.95416533101326],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_34ce5e93a4b060c1b954aa695a0c6cb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e4656c8eded7b5c28fae89dc217a493f.setIcon(icon_34ce5e93a4b060c1b954aa695a0c6cb1);
+        
+    
+        var popup_37ed4082a3f86f6d1466dc381eb49856 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e955fd0a7df8ca75fe9b5d8aca0ee5e = $(`<div id="html_2e955fd0a7df8ca75fe9b5d8aca0ee5e" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.57</div>`)[0];
+                popup_37ed4082a3f86f6d1466dc381eb49856.setContent(html_2e955fd0a7df8ca75fe9b5d8aca0ee5e);
+            
+        
+
+        marker_e4656c8eded7b5c28fae89dc217a493f.bindPopup(popup_37ed4082a3f86f6d1466dc381eb49856)
+        ;
+
+        
+    
+    
+            var marker_d297b73096e76053eaef56ab31647e58 = L.marker(
+                [45.77699179025199, 4.86370410953383],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_020d375be308dffd53a34b7dcc4ff44a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d297b73096e76053eaef56ab31647e58.setIcon(icon_020d375be308dffd53a34b7dcc4ff44a);
+        
+    
+        var popup_2a00aeecf189506056420272fb68e306 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cbba3ce7c56512cc5c995cff8a013f79 = $(`<div id="html_cbba3ce7c56512cc5c995cff8a013f79" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.59</div>`)[0];
+                popup_2a00aeecf189506056420272fb68e306.setContent(html_cbba3ce7c56512cc5c995cff8a013f79);
+            
+        
+
+        marker_d297b73096e76053eaef56ab31647e58.bindPopup(popup_2a00aeecf189506056420272fb68e306)
+        ;
+
+        
+    
+    
+            var marker_9e71165e6ee12089449f999a52840773 = L.marker(
+                [43.284133346641006, 5.863787635952929],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_427f88f8bf542378bedee96123537cf3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9e71165e6ee12089449f999a52840773.setIcon(icon_427f88f8bf542378bedee96123537cf3);
+        
+    
+        var popup_013f49e96b7cbf988ae3cbe34f142df5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3ea932ed5cebb2cdf20b6fe3d7520a6 = $(`<div id="html_d3ea932ed5cebb2cdf20b6fe3d7520a6" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.50</div>`)[0];
+                popup_013f49e96b7cbf988ae3cbe34f142df5.setContent(html_d3ea932ed5cebb2cdf20b6fe3d7520a6);
+            
+        
+
+        marker_9e71165e6ee12089449f999a52840773.bindPopup(popup_013f49e96b7cbf988ae3cbe34f142df5)
+        ;
+
+        
+    
+    
+            var marker_f963005150bf90aa3caf7ff48d576229 = L.marker(
+                [43.139142733542066, 5.76852081792636],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_6a8ef63225dff33df7eca1c39db96f5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_f963005150bf90aa3caf7ff48d576229.setIcon(icon_6a8ef63225dff33df7eca1c39db96f5a);
+        
+    
+        var popup_5d7862665d75adbffef6046c78e300b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e77af3c1e493bb2dea14f8e251e5ac52 = $(`<div id="html_e77af3c1e493bb2dea14f8e251e5ac52" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.78</div>`)[0];
+                popup_5d7862665d75adbffef6046c78e300b8.setContent(html_e77af3c1e493bb2dea14f8e251e5ac52);
+            
+        
+
+        marker_f963005150bf90aa3caf7ff48d576229.bindPopup(popup_5d7862665d75adbffef6046c78e300b8)
+        ;
+
+        
+    
+    
+            var marker_5090ffc5bff48579b0c98ed1153ceae7 = L.marker(
+                [47.30819112541838, 5.8889471768793635],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_df2df691968ef7580fa7bebc4e4627f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_5090ffc5bff48579b0c98ed1153ceae7.setIcon(icon_df2df691968ef7580fa7bebc4e4627f7);
+        
+    
+        var popup_0ef917e62eb0effb2aefb22b859c5acb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5787e07a3775b65e86a8dc1ef4a7357 = $(`<div id="html_e5787e07a3775b65e86a8dc1ef4a7357" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.07</div>`)[0];
+                popup_0ef917e62eb0effb2aefb22b859c5acb.setContent(html_e5787e07a3775b65e86a8dc1ef4a7357);
+            
+        
+
+        marker_5090ffc5bff48579b0c98ed1153ceae7.bindPopup(popup_0ef917e62eb0effb2aefb22b859c5acb)
+        ;
+
+        
+    
+    
+            var marker_ded8b1f53e5e3997de03777806903432 = L.marker(
+                [44.019712028061214, 4.406309550692346],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_d508cc564da61ad5c3502e3ad1749587 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_ded8b1f53e5e3997de03777806903432.setIcon(icon_d508cc564da61ad5c3502e3ad1749587);
+        
+    
+        var popup_8d44624da51d0dfe905e87d8958add2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0133d362d5f178333890ddce2f00a279 = $(`<div id="html_0133d362d5f178333890ddce2f00a279" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.24</div>`)[0];
+                popup_8d44624da51d0dfe905e87d8958add2c.setContent(html_0133d362d5f178333890ddce2f00a279);
+            
+        
+
+        marker_ded8b1f53e5e3997de03777806903432.bindPopup(popup_8d44624da51d0dfe905e87d8958add2c)
+        ;
+
+        
+    
+    
+            var marker_f7ddc4e7abb673a983a7369788057358 = L.marker(
+                [43.58253810518089, 3.8318721159235998],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_4b4a1e553a7217894c03f02c2ecfcdd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f7ddc4e7abb673a983a7369788057358.setIcon(icon_4b4a1e553a7217894c03f02c2ecfcdd6);
+        
+    
+        var popup_5f9153dd623426d140904ef37c7a7950 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acb65957a3c68b8e03e868249425a5b7 = $(`<div id="html_acb65957a3c68b8e03e868249425a5b7" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.74</div>`)[0];
+                popup_5f9153dd623426d140904ef37c7a7950.setContent(html_acb65957a3c68b8e03e868249425a5b7);
+            
+        
+
+        marker_f7ddc4e7abb673a983a7369788057358.bindPopup(popup_5f9153dd623426d140904ef37c7a7950)
+        ;
+
+        
+    
+    
+            var marker_f14f469eb1f8af65fa62604a3fd3e65c = L.marker(
+                [44.33474964563568, 2.0468534409682073],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_5a396fa34732401ec3ac4a2b809086a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_f14f469eb1f8af65fa62604a3fd3e65c.setIcon(icon_5a396fa34732401ec3ac4a2b809086a9);
+        
+    
+        var popup_d2904a2d5d105dcdc1e3c72415c81920 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f559b009672223c6190e2b45ab715728 = $(`<div id="html_f559b009672223c6190e2b45ab715728" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.00</div>`)[0];
+                popup_d2904a2d5d105dcdc1e3c72415c81920.setContent(html_f559b009672223c6190e2b45ab715728);
+            
+        
+
+        marker_f14f469eb1f8af65fa62604a3fd3e65c.bindPopup(popup_d2904a2d5d105dcdc1e3c72415c81920)
+        ;
+
+        
+    
+    
+            var marker_f1df6ff904c544735d83a6f7d204bf12 = L.marker(
+                [46.25827609118474, 5.621697481822497],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_fba3174bd9b06e2b6d668bcc0fad0da1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f1df6ff904c544735d83a6f7d204bf12.setIcon(icon_fba3174bd9b06e2b6d668bcc0fad0da1);
+        
+    
+        var popup_a6c0978770ad3d86c0fc67b4e6bb3cef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_673de6bd242cf0fdda70379905bc060d = $(`<div id="html_673de6bd242cf0fdda70379905bc060d" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.40</div>`)[0];
+                popup_a6c0978770ad3d86c0fc67b4e6bb3cef.setContent(html_673de6bd242cf0fdda70379905bc060d);
+            
+        
+
+        marker_f1df6ff904c544735d83a6f7d204bf12.bindPopup(popup_a6c0978770ad3d86c0fc67b4e6bb3cef)
+        ;
+
+        
+    
+    
+            var marker_92c6fc5c04eb0e2e21d332d3fd5c35b8 = L.marker(
+                [46.1865612046759, 5.362526427457723],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_d36336d10e952877e46b7eedc24fc51d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_92c6fc5c04eb0e2e21d332d3fd5c35b8.setIcon(icon_d36336d10e952877e46b7eedc24fc51d);
+        
+    
+        var popup_dadc339a82d52e8184cf9713bd8f284e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f5a74b6d060bffdc2a5719a83b88c0f = $(`<div id="html_4f5a74b6d060bffdc2a5719a83b88c0f" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.24</div>`)[0];
+                popup_dadc339a82d52e8184cf9713bd8f284e.setContent(html_4f5a74b6d060bffdc2a5719a83b88c0f);
+            
+        
+
+        marker_92c6fc5c04eb0e2e21d332d3fd5c35b8.bindPopup(popup_dadc339a82d52e8184cf9713bd8f284e)
+        ;
+
+        
+    
+    
+            var marker_5ad3f22ffe29aee96b656d37d27089db = L.marker(
+                [48.46804517075138, 2.711723666915292],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_23c9c3931be1226815a03ecedc949f02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_5ad3f22ffe29aee96b656d37d27089db.setIcon(icon_23c9c3931be1226815a03ecedc949f02);
+        
+    
+        var popup_814d9cb065b7d550fa0fd48dccdb2759 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4231ceed176e54c3831eaeb810590d07 = $(`<div id="html_4231ceed176e54c3831eaeb810590d07" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.22</div>`)[0];
+                popup_814d9cb065b7d550fa0fd48dccdb2759.setContent(html_4231ceed176e54c3831eaeb810590d07);
+            
+        
+
+        marker_5ad3f22ffe29aee96b656d37d27089db.bindPopup(popup_814d9cb065b7d550fa0fd48dccdb2759)
+        ;
+
+        
+    
+    
+            var marker_71b75b143a1afa81a0141d87c41b1eaf = L.marker(
+                [44.810018580246464, -0.2530741975308291],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_1720ab233496e726fd98697ddc0b1eb0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_71b75b143a1afa81a0141d87c41b1eaf.setIcon(icon_1720ab233496e726fd98697ddc0b1eb0);
+        
+    
+        var popup_19661ea40ea9c5c4e8fd0e628947b290 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9272949b7082f576c83a0cfeb297c64b = $(`<div id="html_9272949b7082f576c83a0cfeb297c64b" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.64</div>`)[0];
+                popup_19661ea40ea9c5c4e8fd0e628947b290.setContent(html_9272949b7082f576c83a0cfeb297c64b);
+            
+        
+
+        marker_71b75b143a1afa81a0141d87c41b1eaf.bindPopup(popup_19661ea40ea9c5c4e8fd0e628947b290)
+        ;
+
+        
+    
+    
+            var marker_4f3a8405787e5e2235092887b36d5009 = L.marker(
+                [46.11961825250186, 6.101687792296867],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_970e1c10564ae58443e02c95d8ac46d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_4f3a8405787e5e2235092887b36d5009.setIcon(icon_970e1c10564ae58443e02c95d8ac46d0);
+        
+    
+        var popup_5db9295f8a67b6a5a7b844c14607f6a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_399e4397aafa855702636bc22f75df23 = $(`<div id="html_399e4397aafa855702636bc22f75df23" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.04</div>`)[0];
+                popup_5db9295f8a67b6a5a7b844c14607f6a0.setContent(html_399e4397aafa855702636bc22f75df23);
+            
+        
+
+        marker_4f3a8405787e5e2235092887b36d5009.bindPopup(popup_5db9295f8a67b6a5a7b844c14607f6a0)
+        ;
+
+        
+    
+    
+            var marker_18cd37b6a035dec21e6a897a872a994a = L.marker(
+                [43.373814587638805, -1.7572400104099133],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_c8e2a68df7df2bdd64f295ffbd9e8aee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_18cd37b6a035dec21e6a897a872a994a.setIcon(icon_c8e2a68df7df2bdd64f295ffbd9e8aee);
+        
+    
+        var popup_81f8f4bc8ea13e702f076ea5acc9c540 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_421d9765998c515b3e6bcbfa93a73223 = $(`<div id="html_421d9765998c515b3e6bcbfa93a73223" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 1.00</div>`)[0];
+                popup_81f8f4bc8ea13e702f076ea5acc9c540.setContent(html_421d9765998c515b3e6bcbfa93a73223);
+            
+        
+
+        marker_18cd37b6a035dec21e6a897a872a994a.bindPopup(popup_81f8f4bc8ea13e702f076ea5acc9c540)
+        ;
+
+        
+    
+    
+            var marker_b795eecb3ef9d9d47c564c741c4bc07c = L.marker(
+                [44.601993168354255, 2.0155740389291754],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_e50cfafc8e4c6ce001fad498fbd0b48f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b795eecb3ef9d9d47c564c741c4bc07c.setIcon(icon_e50cfafc8e4c6ce001fad498fbd0b48f);
+        
+    
+        var popup_c6792e3de263657fe42fcc0ad5324c39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_faef68cee2a927e0d646016b201e8947 = $(`<div id="html_faef68cee2a927e0d646016b201e8947" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.53</div>`)[0];
+                popup_c6792e3de263657fe42fcc0ad5324c39.setContent(html_faef68cee2a927e0d646016b201e8947);
+            
+        
+
+        marker_b795eecb3ef9d9d47c564c741c4bc07c.bindPopup(popup_c6792e3de263657fe42fcc0ad5324c39)
+        ;
+
+        
+    
+    
+            var marker_2813f4f7bb5803520c1706cb4321eacd = L.marker(
+                [43.538422649564076, 5.442723076924277],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_c522b10e926a9943ad6a6efbc59bd368 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_2813f4f7bb5803520c1706cb4321eacd.setIcon(icon_c522b10e926a9943ad6a6efbc59bd368);
+        
+    
+        var popup_4547dabd8fe3dca5b15299940f533654 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19bb68a0ef945900328c0639a14ccd1d = $(`<div id="html_19bb68a0ef945900328c0639a14ccd1d" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.00</div>`)[0];
+                popup_4547dabd8fe3dca5b15299940f533654.setContent(html_19bb68a0ef945900328c0639a14ccd1d);
+            
+        
+
+        marker_2813f4f7bb5803520c1706cb4321eacd.bindPopup(popup_4547dabd8fe3dca5b15299940f533654)
+        ;
+
+        
+    
+    
+            var marker_9735da5849e13c9b1f245a5efef6b95b = L.marker(
+                [43.3897108714582, 5.163738722682175],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_5817dd65cdf3569848ae1b0b1c4abcce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_9735da5849e13c9b1f245a5efef6b95b.setIcon(icon_5817dd65cdf3569848ae1b0b1c4abcce);
+        
+    
+        var popup_c50c180b64534a14f7ce612fb7aa89a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5ff7904b6f1124d130141ba5d8864a3 = $(`<div id="html_a5ff7904b6f1124d130141ba5d8864a3" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.21</div>`)[0];
+                popup_c50c180b64534a14f7ce612fb7aa89a2.setContent(html_a5ff7904b6f1124d130141ba5d8864a3);
+            
+        
+
+        marker_9735da5849e13c9b1f245a5efef6b95b.bindPopup(popup_c50c180b64534a14f7ce612fb7aa89a2)
+        ;
+
+        
+    
+    
+            var marker_35aa49bb86e8dd259840d14ccbe7ff14 = L.marker(
+                [43.94197182539472, 7.269705026455238],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_bce05b5ade93004e29188034876184df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_35aa49bb86e8dd259840d14ccbe7ff14.setIcon(icon_bce05b5ade93004e29188034876184df);
+        
+    
+        var popup_553a67dd4c8f186192f71d1b39549c56 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6dccf758669235ab5c465126339335d0 = $(`<div id="html_6dccf758669235ab5c465126339335d0" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.14</div>`)[0];
+                popup_553a67dd4c8f186192f71d1b39549c56.setContent(html_6dccf758669235ab5c465126339335d0);
+            
+        
+
+        marker_35aa49bb86e8dd259840d14ccbe7ff14.bindPopup(popup_553a67dd4c8f186192f71d1b39549c56)
+        ;
+
+        
+    
+    
+            var marker_ec833a20d608cc85d92f6c6d9e0f7a77 = L.marker(
+                [43.30002346742836, -0.44174588122602987],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_eed137fd71f6f33b48ccc4099556aa77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ec833a20d608cc85d92f6c6d9e0f7a77.setIcon(icon_eed137fd71f6f33b48ccc4099556aa77);
+        
+    
+        var popup_2578b7c52518a3e3343d142f685cbdeb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d60e7813030257b487599ca6b904b4b = $(`<div id="html_6d60e7813030257b487599ca6b904b4b" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.67</div>`)[0];
+                popup_2578b7c52518a3e3343d142f685cbdeb.setContent(html_6d60e7813030257b487599ca6b904b4b);
+            
+        
+
+        marker_ec833a20d608cc85d92f6c6d9e0f7a77.bindPopup(popup_2578b7c52518a3e3343d142f685cbdeb)
+        ;
+
+        
+    
+    
+            var marker_62564ddd5801aaa3aa91856b3290e9f3 = L.marker(
+                [47.582398989899, 1.3420623737373727],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_c734a270c26788334394fb3f20608a3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_62564ddd5801aaa3aa91856b3290e9f3.setIcon(icon_c734a270c26788334394fb3f20608a3b);
+        
+    
+        var popup_4ec316b069945994f7f12b720074f7e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8154bd0a47ab2d7a695d2e0ed29c58a4 = $(`<div id="html_8154bd0a47ab2d7a695d2e0ed29c58a4" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.45</div>`)[0];
+                popup_4ec316b069945994f7f12b720074f7e5.setContent(html_8154bd0a47ab2d7a695d2e0ed29c58a4);
+            
+        
+
+        marker_62564ddd5801aaa3aa91856b3290e9f3.bindPopup(popup_4ec316b069945994f7f12b720074f7e5)
+        ;
+
+        
+    
+    
+            var marker_ecce13ef453458fde635e60e4a23e18a = L.marker(
+                [48.27361938071249, -1.4300689272556377],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_7dad96fa2b30cec2e64f4709e313dacc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ecce13ef453458fde635e60e4a23e18a.setIcon(icon_7dad96fa2b30cec2e64f4709e313dacc);
+        
+    
+        var popup_7afb325032e5aa25de8d73ca06f2c38a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d30cd579ecdbecaa3b390d3c7d494c77 = $(`<div id="html_d30cd579ecdbecaa3b390d3c7d494c77" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.61</div>`)[0];
+                popup_7afb325032e5aa25de8d73ca06f2c38a.setContent(html_d30cd579ecdbecaa3b390d3c7d494c77);
+            
+        
+
+        marker_ecce13ef453458fde635e60e4a23e18a.bindPopup(popup_7afb325032e5aa25de8d73ca06f2c38a)
+        ;
+
+        
+    
+    
+            var marker_030d84860250cfca9d1e353a454a9670 = L.marker(
+                [43.55548388643933, 0.2073816660093019],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_216f3f31c4a848f59027a39cfa265528 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_030d84860250cfca9d1e353a454a9670.setIcon(icon_216f3f31c4a848f59027a39cfa265528);
+        
+    
+        var popup_199b480270498db4c6489d3e569cadf9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca3aad1c60891622ad5ff469f3fe2ddc = $(`<div id="html_ca3aad1c60891622ad5ff469f3fe2ddc" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.77</div>`)[0];
+                popup_199b480270498db4c6489d3e569cadf9.setContent(html_ca3aad1c60891622ad5ff469f3fe2ddc);
+            
+        
+
+        marker_030d84860250cfca9d1e353a454a9670.bindPopup(popup_199b480270498db4c6489d3e569cadf9)
+        ;
+
+        
+    
+    
+            var marker_44ab4e3a460ba0ca82b9fcd87b531d3d = L.marker(
+                [43.54918452209607, 6.9864307255347065],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_9d541e85201d8367e9244fc05c240e6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_44ab4e3a460ba0ca82b9fcd87b531d3d.setIcon(icon_9d541e85201d8367e9244fc05c240e6a);
+        
+    
+        var popup_b8650f779d23ddf58a1039a02db3d221 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eff47f5c875fb61ee2e2cfdd48d67eac = $(`<div id="html_eff47f5c875fb61ee2e2cfdd48d67eac" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.64</div>`)[0];
+                popup_b8650f779d23ddf58a1039a02db3d221.setContent(html_eff47f5c875fb61ee2e2cfdd48d67eac);
+            
+        
+
+        marker_44ab4e3a460ba0ca82b9fcd87b531d3d.bindPopup(popup_b8650f779d23ddf58a1039a02db3d221)
+        ;
+
+        
+    
+    
+            var marker_c49453cb59e6641082fa34b3574a9414 = L.marker(
+                [47.52105787438821, -1.7504055197309702],
+                {}
+            ).addTo(map_97c7cdee05173b75c6ace6ec1496ef35);
+        
+    
+            var icon_a819b09905ad17ce4a4ef41f5de04b15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c49453cb59e6641082fa34b3574a9414.setIcon(icon_a819b09905ad17ce4a4ef41f5de04b15);
+        
+    
+        var popup_be9a9d7358ab301783644d617da1e76c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b90fdc12f0089cec6e59e3d1bb97c18 = $(`<div id="html_1b90fdc12f0089cec6e59e3d1bb97c18" style="width: 100.0%; height: 100.0%;">Cluster de frelons : Proportion de frelons asiatiques = 0.36</div>`)[0];
+                popup_be9a9d7358ab301783644d617da1e76c.setContent(html_1b90fdc12f0089cec6e59e3d1bb97c18);
+            
+        
+
+        marker_c49453cb59e6641082fa34b3574a9414.bindPopup(popup_be9a9d7358ab301783644d617da1e76c)
+        ;
+
+        
+    
+</script>
+</html>
