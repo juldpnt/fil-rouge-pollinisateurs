@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a944e116f3e648a0112eb4d4f9cdaaf3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a944e116f3e648a0112eb4d4f9cdaaf3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a944e116f3e648a0112eb4d4f9cdaaf3 = L.map(
+                "map_a944e116f3e648a0112eb4d4f9cdaaf3",
+                {
+                    center: [48.8566, 2.3522],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dba43548ae4db6fd4882355c435dac04 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_dba43548ae4db6fd4882355c435dac04.addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var marker_87040e3b90729ddb624f509e8216a60c = L.marker(
+                [48.1993652694271, -1.658021806309843],
+                {"radius": 195.8}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_c5530dfb90c3d71fae4628b4d6c3372b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_87040e3b90729ddb624f509e8216a60c.setIcon(icon_c5530dfb90c3d71fae4628b4d6c3372b);
+        
+    
+        var popup_53f06aedcec8c45936070be282c5c292 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e4e305a05357e3aacd3c6111aa8b6f8 = $(`<div id="html_5e4e305a05357e3aacd3c6111aa8b6f8" style="width: 100.0%; height: 100.0%;">Cluster 0 de Les Eristales (autres): Nombre d'insectes total = 1958, Proportion de Les Eristales (autres) = 0.18</div>`)[0];
+                popup_53f06aedcec8c45936070be282c5c292.setContent(html_5e4e305a05357e3aacd3c6111aa8b6f8);
+            
+        
+
+        marker_87040e3b90729ddb624f509e8216a60c.bindPopup(popup_53f06aedcec8c45936070be282c5c292)
+        ;
+
+        
+    
+    
+            var marker_963f7aa2ba71f88b3ddae97f9111a38d = L.marker(
+                [46.2555537128698, 5.619548688057291],
+                {"radius": 37.5}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_3dabf2e5f9f69c8fd27f3de446f64e67 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_963f7aa2ba71f88b3ddae97f9111a38d.setIcon(icon_3dabf2e5f9f69c8fd27f3de446f64e67);
+        
+    
+        var popup_e99502118a5e2d7ce0dd6c49a5b8633c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7daa4ca2dc229f737d570ba3a1a71fa = $(`<div id="html_f7daa4ca2dc229f737d570ba3a1a71fa" style="width: 100.0%; height: 100.0%;">Cluster 1 de L'Abeille mellifère: Nombre d'insectes total = 375, Proportion de L'Abeille mellifère = 0.17</div>`)[0];
+                popup_e99502118a5e2d7ce0dd6c49a5b8633c.setContent(html_f7daa4ca2dc229f737d570ba3a1a71fa);
+            
+        
+
+        marker_963f7aa2ba71f88b3ddae97f9111a38d.bindPopup(popup_e99502118a5e2d7ce0dd6c49a5b8633c)
+        ;
+
+        
+    
+    
+            var marker_c9c90533dabbf22cee1c1ed78cd6d165 = L.marker(
+                [44.70420409666654, 4.581899154290301],
+                {"radius": 107.9}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_197801431a92d6388192bdfe37f67b96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_c9c90533dabbf22cee1c1ed78cd6d165.setIcon(icon_197801431a92d6388192bdfe37f67b96);
+        
+    
+        var popup_0a391b0d4066f371294135508f1f99cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a8c05407f0b09441b1ac5911761d930 = $(`<div id="html_5a8c05407f0b09441b1ac5911761d930" style="width: 100.0%; height: 100.0%;">Cluster 2 de L'Abeille mellifère: Nombre d'insectes total = 1079, Proportion de L'Abeille mellifère = 0.23</div>`)[0];
+                popup_0a391b0d4066f371294135508f1f99cd.setContent(html_5a8c05407f0b09441b1ac5911761d930);
+            
+        
+
+        marker_c9c90533dabbf22cee1c1ed78cd6d165.bindPopup(popup_0a391b0d4066f371294135508f1f99cd)
+        ;
+
+        
+    
+    
+            var marker_9284d7358af4060ee66cf2b3e266d844 = L.marker(
+                [46.11398574354333, 6.1158325953755055],
+                {"radius": 21.4}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_8f2903ddee05cb3a72b3656147b85e3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_9284d7358af4060ee66cf2b3e266d844.setIcon(icon_8f2903ddee05cb3a72b3656147b85e3d);
+        
+    
+        var popup_1a4c9db01a7b30ee0e670f78ff1c0343 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_483e3d8268284744d2504fe44e4c00fd = $(`<div id="html_483e3d8268284744d2504fe44e4c00fd" style="width: 100.0%; height: 100.0%;">Cluster 3 de L'Abeille mellifère: Nombre d'insectes total = 214, Proportion de L'Abeille mellifère = 0.24</div>`)[0];
+                popup_1a4c9db01a7b30ee0e670f78ff1c0343.setContent(html_483e3d8268284744d2504fe44e4c00fd);
+            
+        
+
+        marker_9284d7358af4060ee66cf2b3e266d844.bindPopup(popup_1a4c9db01a7b30ee0e670f78ff1c0343)
+        ;
+
+        
+    
+    
+            var marker_3ca87bf22229ad46012a744cd3ac2f5c = L.marker(
+                [48.79299260833777, 2.2409434451393206],
+                {"radius": 130.0}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_8713636316a9c453e8f12125a1cd907b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_3ca87bf22229ad46012a744cd3ac2f5c.setIcon(icon_8713636316a9c453e8f12125a1cd907b);
+        
+    
+        var popup_d3f5ea2d7dfbcfe4108e5dcabe806cdd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b19ec91a7b9b6d5be387c701bba3e80 = $(`<div id="html_5b19ec91a7b9b6d5be387c701bba3e80" style="width: 100.0%; height: 100.0%;">Cluster 4 de L'Abeille mellifère: Nombre d'insectes total = 1300, Proportion de L'Abeille mellifère = 0.24</div>`)[0];
+                popup_d3f5ea2d7dfbcfe4108e5dcabe806cdd.setContent(html_5b19ec91a7b9b6d5be387c701bba3e80);
+            
+        
+
+        marker_3ca87bf22229ad46012a744cd3ac2f5c.bindPopup(popup_d3f5ea2d7dfbcfe4108e5dcabe806cdd)
+        ;
+
+        
+    
+    
+            var marker_0b983275dabd22b213220af815642090 = L.marker(
+                [46.18607843755699, 5.361680874549732],
+                {"radius": 29.5}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_36fe2f2adf4214c5ad4efa376f5c3a21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0b983275dabd22b213220af815642090.setIcon(icon_36fe2f2adf4214c5ad4efa376f5c3a21);
+        
+    
+        var popup_4f3f684bd48c418c45069d92bc6fb5e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a41a95639d9bde0b8b1287dc3c62a9f = $(`<div id="html_5a41a95639d9bde0b8b1287dc3c62a9f" style="width: 100.0%; height: 100.0%;">Cluster 5 de Les Eristales (autres): Nombre d'insectes total = 295, Proportion de Les Eristales (autres) = 0.19</div>`)[0];
+                popup_4f3f684bd48c418c45069d92bc6fb5e4.setContent(html_5a41a95639d9bde0b8b1287dc3c62a9f);
+            
+        
+
+        marker_0b983275dabd22b213220af815642090.bindPopup(popup_4f3f684bd48c418c45069d92bc6fb5e4)
+        ;
+
+        
+    
+    
+            var marker_1dfb6ed2ba4dc97394d2d4d79094317e = L.marker(
+                [44.97578642291839, 1.0017277069312382],
+                {"radius": 41.1}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_969e3977842eec694c3b1273097a36f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_1dfb6ed2ba4dc97394d2d4d79094317e.setIcon(icon_969e3977842eec694c3b1273097a36f3);
+        
+    
+        var popup_a2a8c001b93749cdee4b4d59891eb21e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cf7b9c444887fa4940864bcf12230b8 = $(`<div id="html_2cf7b9c444887fa4940864bcf12230b8" style="width: 100.0%; height: 100.0%;">Cluster 6 de L'Abeille mellifère: Nombre d'insectes total = 411, Proportion de L'Abeille mellifère = 0.18</div>`)[0];
+                popup_a2a8c001b93749cdee4b4d59891eb21e.setContent(html_2cf7b9c444887fa4940864bcf12230b8);
+            
+        
+
+        marker_1dfb6ed2ba4dc97394d2d4d79094317e.bindPopup(popup_a2a8c001b93749cdee4b4d59891eb21e)
+        ;
+
+        
+    
+    
+            var marker_35d3826281ff9625fcd0919c5a90416c = L.marker(
+                [49.02787769437011, 1.9070428248817617],
+                {"radius": 37.5}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_4f109f669027604d304bfe168592b621 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_35d3826281ff9625fcd0919c5a90416c.setIcon(icon_4f109f669027604d304bfe168592b621);
+        
+    
+        var popup_9fb8c1f9135ec5adccbcecec72f7aeb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_deed75124468267d31270c487fb134f1 = $(`<div id="html_deed75124468267d31270c487fb134f1" style="width: 100.0%; height: 100.0%;">Cluster 7 de L'Abeille mellifère: Nombre d'insectes total = 375, Proportion de L'Abeille mellifère = 0.18</div>`)[0];
+                popup_9fb8c1f9135ec5adccbcecec72f7aeb3.setContent(html_deed75124468267d31270c487fb134f1);
+            
+        
+
+        marker_35d3826281ff9625fcd0919c5a90416c.bindPopup(popup_9fb8c1f9135ec5adccbcecec72f7aeb3)
+        ;
+
+        
+    
+    
+            var marker_fe78982b79243e2874dac52a8198d06e = L.marker(
+                [50.66135359168053, 4.599293941338323],
+                {"radius": 21.2}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_a6afab3aa4a2162dbcf3f7b168da7b52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_fe78982b79243e2874dac52a8198d06e.setIcon(icon_a6afab3aa4a2162dbcf3f7b168da7b52);
+        
+    
+        var popup_5214e2db9483b52257d443b682334cec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee3cc9d1f94d34cfcf99c1e81eb42e1e = $(`<div id="html_ee3cc9d1f94d34cfcf99c1e81eb42e1e" style="width: 100.0%; height: 100.0%;">Cluster 8 de L'Abeille mellifère: Nombre d'insectes total = 212, Proportion de L'Abeille mellifère = 0.36</div>`)[0];
+                popup_5214e2db9483b52257d443b682334cec.setContent(html_ee3cc9d1f94d34cfcf99c1e81eb42e1e);
+            
+        
+
+        marker_fe78982b79243e2874dac52a8198d06e.bindPopup(popup_5214e2db9483b52257d443b682334cec)
+        ;
+
+        
+    
+    
+            var marker_b11f12b681f1d2ba751e6ad522d6b653 = L.marker(
+                [45.770733414302526, 4.831645146535413],
+                {"radius": 23.7}
+            ).addTo(map_a944e116f3e648a0112eb4d4f9cdaaf3);
+        
+    
+            var icon_03454f53e68960fa7d3607c1704b78be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_b11f12b681f1d2ba751e6ad522d6b653.setIcon(icon_03454f53e68960fa7d3607c1704b78be);
+        
+    
+        var popup_c3818feb8d8ffcdcea046d120cd8be31 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e19cfe2c30c2b1e1459594abe538a1ad = $(`<div id="html_e19cfe2c30c2b1e1459594abe538a1ad" style="width: 100.0%; height: 100.0%;">Cluster 9 de L'Abeille mellifère: Nombre d'insectes total = 237, Proportion de L'Abeille mellifère = 0.38</div>`)[0];
+                popup_c3818feb8d8ffcdcea046d120cd8be31.setContent(html_e19cfe2c30c2b1e1459594abe538a1ad);
+            
+        
+
+        marker_b11f12b681f1d2ba751e6ad522d6b653.bindPopup(popup_c3818feb8d8ffcdcea046d120cd8be31)
+        ;
+
+        
+    
+</script>
+</html>
