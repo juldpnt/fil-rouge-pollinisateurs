@@ -4,29 +4,39 @@ from models.supervised.workflow import (
     preprocess_data,
     train_pipe,
 )
+from models.preprocessors import get_df_by_hours, get_df_by_months
 
-use_backup = False
+### SETUP: PARAMETER TO CHANGE
+# If you already have a preprocessed dataset with the target computed
+# Please check preprocess_data function to check what must be in the file.
+use_backup = True
 
-
+# NOT USABLE IN THIS STATE
 def main():
+    ## PARAMETERS
     path = "data/raw_data/spipoll.csv"
-    data = pd.read_csv(path).sample(frac=0.05, random_state=1).copy()
-
+    path_backup = "spipoll_target_medium.csv"
     hour_range = [i for i in range(0, 24)]
     month_range = [i for i in range(1, 13)]
 
+    target_source = "insecte_ordre"
+    dummy_col = "habitat"
     distance = 0.5
-
+    y_column_name = "specific_richness"
+    
+    
     if use_backup:
-        df_transformed = pd.read_csv("models/supervised/df_transformed.csv")
+        df_transformed = pd.read_csv(path_backup)
+
     else:
+        data = pd.read_csv(path).sample(frac=0.05, random_state=1).copy()
         df_transformed, dummies_col = preprocess_data(
             data,
             distance,
             hour_range,
             month_range,
-            "habitat",
-            "insecte_ordre",
+            dummy_col,
+            target_source,
         )
 
     numeric_features = [
@@ -40,10 +50,10 @@ def main():
 
     nominal_features = [
         "plante_famille",
-        "insecte_ordre",
+        target_source,
     ] + dummies_col
 
-    y_column_name = "specific_richness"
+    
 
     kwargs_sampler = {
         "min_thresholds": [0.0],
