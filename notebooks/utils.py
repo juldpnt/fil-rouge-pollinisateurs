@@ -10,9 +10,9 @@ def setup_env_path() -> None:
         - loading modules from parent directory
     """
     print("Former working directory: ", os.getcwd())
-    while os.getcwd().split("\\")[-1] != "fil-rouge-pollinisateurs":
+    while os.getcwd().split("/")[-1] != "fil-rouge-pollinisateurs":
         os.chdir("..")
-        if os.getcwd() == "\\":
+        if os.getcwd() == "/":
             print("Error: Could not find parent directory")
             sys.exit()
     sys.path.append(os.getcwd())
