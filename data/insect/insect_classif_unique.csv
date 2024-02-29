@@ -1,0 +1,578 @@
+insecte_sc,insecte_fr,Ordre,Super famille,Famille,Sous famille,Genre,Espèce
+Apis mellifera,L'Abeille mellifère,Hymenoptera,Apoidea,Apidae,Apinae,Apis,Apis mellifera
+Bombus,Les Bourdons noirs à bande(s) jaune(s) et cul blanc,Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Sarcophaga,Les Mouches à damier,Diptera,Oestroidea,Sarcophagidae,Sarcophaginae,Sarcophaga,
+Tettigonioidea,Les Sauterelles,Orthoptera,Tettigonioidea,,,,
+"Neomyia, Calliphora et autres",Les Mouches aux reflets métalliques,Diptera,Oestroidea,Calliphoridae,Calliphorinae,Calliphora,
+Diptera,Les Mouches difficiles à déterminer,Diptera,,,,,
+Tephritidae et autres,Les Téphritides et autres,Diptera,Tephritoidea,Tephritidae,,,
+"Eupeodes, Scaeva",Les Syrphes à taches en virgules,Diptera,Syrphoidea,Syrphidae,Syrphinae,Scaeva,
+Episyrphus balteatus,Le Syrphe ceinturé,Diptera,Syrphoidea,Syrphidae,Syrphinae,Episyrphus,Episyrphus balteatus
+Meliscaeva et autres,Les Syrphes à abdomen fin,Diptera,Syrphoidea,Syrphidae,Syrphinae,Meliscaeva,
+Eristalis,Les Eristales (autres),Diptera,Syrphoidea,Syrphidae,Eristalinae,Eristalis,
+Coleoptera,Les Coléoptères difficiles à déterminer,Coleoptera,,,,,
+Nematocera,"Les Moustiques, Tipules et autres diptères Nématocères",Diptera,,,,,
+Pyrrhocoris apterus,Le Gendarme,Hemiptera,Pyrrhocoroidea,Pyrrhocoridae,,Pyrrhocoris,Pyrrhocoris apterus
+Pentatomidae,Les Pentatomes,Hemiptera,Pentatomoidea,Pentatomidae,,,
+Formicinae,Les Fourmis à pétiole simple,Hymenoptera,Formicoidea,Formicidae,Formicinae,,
+Aphididae,Les Pucerons,Hemiptera,Aphidoidea,Aphididae,,,
+Xylocopa violacea,Le Xylocope violet (mâle),Hymenoptera,Apoidea,Apidae,Xylocopinae,Xylocopa,Xylocopa violacea
+"Syrphus, Dasysyrphus et autres",Les Syrphes Syrphus et autres,Diptera,Syrphoidea,Syrphidae,Syrphinae,Dasysyrphus,
+Sepsidae,Les Sepsides,Diptera,Sciomyzoidea,Sepsidae,,,
+"Dolomedes, Pisaura",Les Pisaures,Araneae,Lycosoidea,Pisauridae,,Pisaura,
+"Cucujidae, Cryptophagidae et autres",Les Petits Clavicornes,Coleoptera,Cucujoidea,Cryptophagidae,,,
+"cicadelles, cercopes et autres",Les Homoptères autres,Hemiptera,,,,,
+Gonepteryx cleopatra,Le Citron de Provence (mâle),Lepidoptera,Papilionoidea,Pieridae,Coliadinae,Gonepteryx,Gonepteryx cleopatra
+Scathophaga et autres,Les Mouches pâles,Diptera,Muscoidea,Scathophagidae,Scathophaginae,Scathophaga,
+Araneae,Les Araignées,Araneae,,,,,
+Salticidae,Les Araignées sauteuses,Araneae,,Salticidae,,,
+Lycosidae,Les Araignées loup,Araneae,Lycosoidea,Lycosidae,,,
+Coccinella septempunctata,La Coccinelle à 7 points,Coleoptera,Coccinelloidea,Coccinellidae,Coccinellinae,Coccinella,Coccinella septempunctata
+Lepidoptera,Les Chenilles et fausses-Chenilles,Lepidoptera,,,,,
+"Halictus, Lasioglossum et autres",Les Halictes (femelles),Hymenoptera,Apoidea,Halictidae,Halictinae,Lasioglossum,
+Colletes cunicularius et autres,Les Collètes de printemps,Hymenoptera,Apoidea,Colletidae,Colletinae,Colletes,Colletes cunicularius
+Andrena clarkella et autres,Les Abeilles à thorax roux,Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,Andrena clarkella
+Apidae et autres,Les Abeilles difficiles à déterminer,Hymenoptera,Apoidea,Apidae,,,
+Polistes,Les Guêpes Polistes,Hymenoptera,Vespoidea,Vespidae,Polistinae,Polistes,
+Eucera et autres,Les Eucères (mâles),Hymenoptera,Apoidea,Apidae,Apinae,Eucera,
+Macroglossum stellatarum,Le Moro-sphinx,Lepidoptera,Bombycoidea,Sphingidae,Macroglossinae,Macroglossum,Macroglossum stellatarum
+Syrphinae,Les Syrphes difficiles à déterminer,Diptera,Syrphoidea,Syrphidae,Syrphinae,,
+Odynerus et autres,Les Guêpes maçonnes à abdomen court,Hymenoptera,Vespoidea,Vespidae,Eumeninae,Odynerus,
+"Xysticus, Coriarachne, Ozyptila et autres",Les Araignées crabes sombres,Araneae,,Thomisidae,,Ozyptila,
+Chrysolina americana,La Chrysomèle américaine,Coleoptera,Chrysomeloidea,Chrysomelidae,Chrysomelinae,Chrysolina,Chrysolina americana
+Merodon et autres,Les Syrphes à l'aspect de bourdon,Diptera,Syrphoidea,Syrphidae,Eristalinae,Merodon,
+Andrenidae,Les Andrènes difficiles à déterminer,Hymenoptera,Apoidea,Andrenidae,,,
+Nymphalis polychloros,La Grande Tortue,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Nymphalis,Nymphalis polychloros
+"Anthophora, Eucera",Les Anthophores autres et espèces proches,Hymenoptera,Apoidea,Apidae,Apinae,Eucera,
+Chrysotoxum,Les Chrysotoxes,Diptera,Syrphoidea,Syrphidae,Syrphinae,Chrysotoxum,
+Pararge aegeria,Le Tircis,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Pararge,Pararge aegeria
+Xylocopa,Les Xylocopes,Hymenoptera,Apoidea,Apidae,Xylocopinae,Xylocopa,
+Bombus,Les Bourdons noirs à bande(s) jaune(s) et cul rouge,Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Andrenidae et autres,Les Andrènes rayées difficiles à déterminer,Hymenoptera,Apoidea,Andrenidae,,,
+Chalcidoidea,Les Terebrants Chalcidiens et autres,Hymenoptera,Chalcidoidea,,,,
+Osmia cornuta et autres,Les Osmies noir et roux (mâles),Hymenoptera,Apoidea,Megachilidae,Megachilinae,Osmia,Osmia cornuta
+Gonepteryx,Les Citrons,Lepidoptera,Papilionoidea,Pieridae,Coliadinae,Gonepteryx,
+Aglais io,Le Paon du jour,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Aglais,Aglais io
+Vanessa atalanta,Le Vulcain,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Vanessa,Vanessa atalanta
+"Curculionidae, Apionidae",Les Apions,Coleoptera,Curculionoidea,Apionidae,,,
+Coreidae,Les Coréides,Hemiptera,Coreoidea,Coreidae,,,
+Araneidae,Les Epeires et autres Araneidae,Araneae,Araneoidea,Araneidae,,,
+Ichneumonidae,Les Ichneumons et autres,Hymenoptera,Ichneumonoidea,Ichneumonidae,,,
+Nitidulidae,Les Nitidulides,Coleoptera,Cucujoidea,Nitidulidae,,,
+Aglais urticae,La Petite Tortue,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Nymphalis,Nymphalis urticae
+Eristalinus,Les Eristales aux yeux ponctués,Diptera,Syrphoidea,Syrphidae,Eristalinae,Eristalinus,
+Heteroptera,Les Punaises difficiles à déterminer,Hemiptera,,,,,
+Thaumatomyia,Les Chloropides jaunes,Diptera,Carnoidea,Chloropidae,Chloropinae,Thaumatomyia,
+Larinus et autres,Les Charançons (autres),Coleoptera,Curculionoidea,Curculionidae,Lixinae,Larinus,
+Stomorhina lunata,La Stomorhina,Diptera,Oestroidea,Rhiniidae,,Stomorhina,Stomorhina lunata
+Stratiomys,Les Stratiomes jaune et noir,Diptera,,Stratiomyidae,Stratiomyinae,Stratiomys,
+"Helophilus, Parhelophilus",Les Hélophiles,Diptera,Syrphoidea,Syrphidae,Eristalinae,Parhelophilus,
+Libythea celtis,L'Echancré,Lepidoptera,Papilionoidea,Nymphalidae,Libytheinae,Libythea,Libythea celtis
+Coccinellidae,Les Coccinelles,Coleoptera,Coccinelloidea,Coccinellidae,,,
+Anthophora et autres,Les Anthophores mâles,Hymenoptera,Apoidea,Apidae,Apinae,Anthophora,
+"Allantus, Macrophya et autres",Les Tenthrèdes noir et blanc,Hymenoptera,Tenthredinoidea,Tenthredinidae,Tenthredininae,Macrophya,
+Miridae,Les Mirides,Hemiptera,Cimicoidea,Miridae,,,
+Bombus,Les Bourdons à pilosité fauve à grise,Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Bombus,Les Bourdons noirs à cul rouge,Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Pterophoridae,Les Ptérophores,Lepidoptera,Pterophoroidea,Pterophoridae,,,
+Sphaerophoria scripta,Le Syrphe porte-plume (mâle),Diptera,Syrphoidea,Syrphidae,Syrphinae,Sphaerophoria,Sphaerophoria scripta
+Andrena,Les Andrènes à pilosité noir et blanc,Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,
+Osmia,Les Osmies,Hymenoptera,Apoidea,Megachilidae,Megachilinae,Osmia,
+Sphaerophoria,Les Syrphes Sphaerophoria (femelle),Diptera,Syrphoidea,Syrphidae,Syrphinae,Sphaerophoria,
+Syrphinae,Les Syrphes aux fémurs enflés,Diptera,Syrphoidea,Syrphidae,Syrphinae,,
+Tachinidae,Les Tachinaires difficiles à déterminer,Diptera,Oestroidea,Tachinidae,,,
+Polygonia,Le Robert-le-Diable,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Nymphalis,
+Acrididae,Les Criquets,Orthoptera,Acridoidea,Acrididae,,,
+Halictidae,Les Halictes (mâles),Hymenoptera,Apoidea,Halictidae,,,
+Vespa velutina,Le Frelon asiatique,Hymenoptera,Vespoidea,Vespidae,Vespinae,Vespa,Vespa velutina
+Misumena,Les Araignées crabes Misumena,Araneae,,Thomisidae,,Misumena,
+Oulema,Les Criocères bicolores,Coleoptera,Chrysomeloidea,Chrysomelidae,Criocerinae,Oulema,
+Andrena fulva,L'Andrène fauve (femelle),Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,Andrena fulva
+Formicidae,Les Fourmis difficiles à déterminer,Hymenoptera,Formicoidea,Formicidae,,,
+Sphecodes et autres,Les Abeilles à abdomen rouge,Hymenoptera,Apoidea,Halictidae,Halictinae,Sphecodes,
+Nomada et autres,"Les Abeilles coucou noir, jaune et rouge",Hymenoptera,Apoidea,Apidae,Nomadinae,Nomada,
+Osmia cornuta et autres,Les Osmies noir et roux (femelles),Hymenoptera,Apoidea,Megachilidae,Megachilinae,Osmia,Osmia cornuta
+Pieris,Les Piérides,Ericales,,Ericaceae,Vaccinioideae,Pieris,
+Sciaridae,Les Sciarides,Diptera,Sciaroidea,Sciaridae,,,
+"Aculepeira, Neoscona",Les Epeires à dessin de feuille de Chêne,Araneae,Araneoidea,Araneidae,,Neoscona,
+Araniella,Les Epeires concombre,Araneae,Araneoidea,Araneidae,,Araniella,
+"Bombylius, Systoechus",Les Bombyles,Diptera,Asiloidea,Bombyliidae,Bombyliinae,Systoechus,
+Sphaerophoria,Les Syrphes Sphaerophoria (mâle),Diptera,Syrphoidea,Syrphidae,Syrphinae,Sphaerophoria,
+Eristalinus taeniops,L'Eristale taeniops,Diptera,Syrphoidea,Syrphidae,Eristalinae,Eristalinus,Eristalinus taeniops
+Melecta,Les Abeilles coucou Melecta,Hymenoptera,Apoidea,Apidae,Apinae,Melecta,
+Celastrina argiolus,L'Azuré des Nerpruns (femelle),Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Celastrina,Celastrina argiolus
+Empis et autres,Les Empidides,Diptera,Empidoidea,Empididae,Empidinae,Empis,
+Spilostethus pandurus,La Viole rouge,Hemiptera,Lygaeoidea,Lygaeidae,Lygaeinae,Spilostethus,Spilostethus pandurus
+Oxyopes,Les Araignées lynx,Araneae,Lycosoidea,Oxyopidae,,Oxyopes,
+Collembola,Les Collemboles,,,,,,
+Carcharodus et autres,Les Hespéries brunes sans taches,Lepidoptera,Hesperioidea,Hesperiidae,Pyrginae,Carcharodus,
+Bombus,Les Bourdons jaune et noir,Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Gymnosoma,Les Tachinaires fauves à abdomen rond,Diptera,Oestroidea,Tachinidae,Phasiinae,Gymnosoma,
+"Cetonia, Protaetia",Les Cétoines métalliques à marques blanches,Coleoptera,Scarabaeoidea,Scarabaeidae,Cetoniinae,Protaetia,
+Bombus,Les Bourdons à thorax fauve et à abdomen noir et blanc,Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Thomisus,Les Araignées crabes Thomisus,Araneae,,Thomisidae,,Thomisus,
+Oxythyrea funesta,Le Drap mortuaire,Coleoptera,Scarabaeoidea,Scarabaeidae,Cetoniinae,Oxythyrea,Oxythyrea funesta
+Corizus hyoscyami,La Punaise de la Jusquiame,Hemiptera,Coreoidea,Rhopalidae,,Corizus,Corizus hyoscyami
+Pompilidae,Les Pompiles,Hymenoptera,Pompiloidea,Pompilidae,,,
+Tenthredinidae,Les Tenthrèdes,Hymenoptera,Tenthredinoidea,Tenthredinidae,,,
+Andrena,Les Andrènes à abdomen rouge et noir (autres),Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,
+Myathropa florea,L'Eristale des fleurs,Diptera,Syrphoidea,Syrphidae,Eristalinae,Myathropa,Myathropa florea
+Polyommatus et autres,Les Azurés bleus sans chevrons oranges,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Polyommatus,
+Lygaeus,Les Lygées rouges à points blancs,Hemiptera,Lygaeoidea,Lygaeidae,Lygaeinae,Lygaeus,
+Allantus et autres,Les Tenthrèdes noires,Hymenoptera,Tenthredinoidea,Tenthredinidae,Allantinae,Allantus,
+"Allantus, Dolerus et autres",Les Tenthrèdes noir et fauve orangé,Hymenoptera,Tenthredinoidea,Tenthredinidae,Selandriinae,Dolerus,
+Tachina et autres,Les Tachinaires fauves velues,Diptera,Oestroidea,Tachinidae,Tachininae,Tachina,
+Synema globosum,L'Araignée crabe Napoléon,Araneae,,Thomisidae,,Synema,Synema globosum
+Mesembrina,Les Mouches Mesembrina,Diptera,Muscoidea,Muscidae,Muscinae,Mesembrina,
+Tropinota,Les Cétoines sombres soyeuses,Coleoptera,Scarabaeoidea,Scarabaeidae,Cetoniinae,Tropinota,
+Megachile,Les Mégachiles,Hymenoptera,Apoidea,Megachilidae,Megachilinae,Megachile,
+Euchloe et autres,Les Piérides marbrées,Lepidoptera,Papilionoidea,Pieridae,Pierinae,Euchloe,
+Conopidae,Les Conopides (autres),Diptera,Conopoidea,Conopidae,,,
+Leptidea,Les Piérides à ailes rondes,Lepidoptera,Papilionoidea,Pieridae,Dismorphiinae,Leptidea,
+Argynnis et autres,Les Nacrés et autres,Lepidoptera,Papilionoidea,Nymphalidae,Heliconiinae,Argynnis,
+Anthocharis cardamines,L'Aurore (mâle),Lepidoptera,Papilionoidea,Pieridae,Pierinae,Anthocharis,Anthocharis cardamines
+Callophrys,Les Théclas verts (Méditerranée),Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Callophrys,
+Graphomya,Les Graphomyies,Diptera,Muscoidea,Muscidae,Mydaeinae,Graphomya,
+Oreina et autres,Les Chrysomèles à motifs,Coleoptera,Chrysomeloidea,Chrysomelidae,Chrysomelinae,Oreina,
+Bibio et autres,Les Bibions et autres,Diptera,Bibionoidea,Bibionidae,Bibioninae,Bibio,
+Bombus,Les Bourdons (autres),Hymenoptera,Apoidea,Apidae,Apinae,Bombus,
+Crabronidae,Les Guêpes Crabronidae difficiles à déterminer,Hymenoptera,Apoidea,Crabronidae,,,
+Ferdinandea cuprea,La Ferdinandea cuprea,Diptera,Syrphoidea,Syrphidae,Eristalinae,Ferdinandea,Ferdinandea cuprea
+Conops et autres,Les Conopides jaune et noir,Diptera,Conopoidea,Conopidae,Conopinae,Conops,
+Chrysomelidae,Les Chrysomèles bicolores,Coleoptera,Chrysomeloidea,Chrysomelidae,,,
+Cryptocephalus et autres,Les Chrysomèles unies,Coleoptera,Chrysomeloidea,Chrysomelidae,Cryptocephalinae,Cryptocephalus,
+Iphiclides podalirius,Le Flambé,Lepidoptera,Papilionoidea,Papilionidae,Papilioninae,Iphiclides,Iphiclides podalirius
+Pieris,Les Piérides nervurées,Ericales,,Ericaceae,Vaccinioideae,Pieris,
+Lycaena phlaeas,Le Cuivré commun,Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,Lycaena phlaeas
+Lygus lineolaris,Les Punaises prédatrices ternes,Hemiptera,Cimicoidea,Miridae,Mirinae,Lygus,Lygus lineolaris
+Epeoloides coecutiens,L'Abeille coucou Epeloides (femelle),Hymenoptera,Apoidea,Apidae,Apinae,Epeoloides,Epeoloides coecutiens
+Bruchus et autres,Les Bruches,Coleoptera,Chrysomeloidea,Chrysomelidae,Bruchinae,Bruchus,
+"Vespula, Dolichovespula",Les Guêpes Vespula,Hymenoptera,Vespoidea,Vespidae,Vespinae,Dolichovespula,
+Lepidoptera,Les Microlépidoptères difficiles à déterminer,Lepidoptera,,,,,
+Pyrausta,Les Pyrales pourpres aux dessins jaunes,Lepidoptera,Pyraloidea,Crambidae,Pyraustinae,Pyrausta,
+Dermestidae,Les Dermestes,Coleoptera,Bostrichoidea,Dermestidae,,,
+Philodromus,Les Araignées crabes Philodromus,Araneae,,Philodromidae,,Philodromus,
+Amegilla et autres,Les Anthophores rayés et espèces proches,Hymenoptera,Apoidea,Apidae,Apinae,Amegilla,
+Lepidoptera,Les Lépidoptères difficiles à déterminer,Lepidoptera,,,,,
+Vanessa cardui,La Belle-Dame,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Vanessa,Vanessa cardui
+Issoria lathonia,Le Petit Nacré,Lepidoptera,Papilionoidea,Nymphalidae,Heliconiinae,Issoria,Issoria lathonia
+Dasypoda,Les Abeilles à culottes,Hymenoptera,Apoidea,Melittidae,Dasypodainae,Dasypoda,
+Eurydema,Les Punaises Eurydema,Hemiptera,Pentatomoidea,Pentatomidae,Pentatominae,Eurydema,
+Trichodes alvearius,Le Clairon des ruches,Coleoptera,Cleroidea,Cleridae,Clerinae,Trichodes,Trichodes alvearius
+Geron,Les Bombyles bossus,Diptera,Asiloidea,Bombyliidae,Gerontinae,Geron,
+Leucozona glaucia,Le Syrphe Leucozona,Diptera,Syrphoidea,Syrphidae,Syrphinae,Leucozona,Leucozona glaucia
+"Tibellus, Paratibellus",Les Araignées crabes minces,Araneae,Araneoidea,Philodromidae,,,
+Runcinia grammica,L'Araignée crabe Runcinia,Araneae,,Thomisidae,,Runcinia,Runcinia grammica
+Oulema,Les Chrysomèles Oulema bleues,Coleoptera,Chrysomeloidea,Chrysomelidae,Criocerinae,Oulema,
+Cylindromyia,Les Tachinaires à abdomen cylindrique,Diptera,Oestroidea,Tachinidae,Phasiinae,Cylindromyia,
+Rhingia,Les Rhingies,Diptera,Syrphoidea,Syrphidae,Eristalinae,Rhingia,
+Meloe,Les Triongulins,Coleoptera,Tenebrionoidea,Meloidae,Meloinae,Meloe,
+Byturus ochraceus,Le Byturide aux gros yeux,Coleoptera,Cleroidea,Byturidae,,Byturus,Byturus ochraceus
+Ebrechtella tricuspidata,L'Araignée crabe Ebrechtella,Araneae,,Thomisidae,,Ebrechtella,Ebrechtella tricuspidata
+Myrmicinae,Les Fourmis à double pétiole,Hymenoptera,Formicoidea,Formicidae,Myrmicinae,,
+"Stelis, Heriades",Les Mégachiles de petite taille,Hymenoptera,Apoidea,Megachilidae,Megachilinae,Heriades,
+plusieurs Dasytidae,Les Dasytides noirs,Coleoptera,Cleroidea,Melyridae,,,
+Ebaeus,Les Malachides à thorax rouge,Coleoptera,Cleroidea,Melyridae,Malachiinae,Ebaeus,
+Grammoptera et autres,Les Longicornes entièrement noirs,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Grammoptera,
+Anthomyia et autres,Les Mouches tachetées,Diptera,Muscoidea,Anthomyiidae,Anthomyiinae,Anthomyia,
+Chrysopidae,Les Chrysopes,Neuroptera,,Chrysopidae,,,
+Syritta,Les Syrittes,Diptera,Syrphoidea,Syrphidae,Eristalinae,Syritta,
+Lasiommata,Le Satyre et autres,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Lasiommata,
+Rhynocoris,Les Réduves,Hemiptera,Reduvioidea,Reduviidae,Harpactorinae,Rhynocoris,
+Heteroptera,Les larves de Punaises,Hemiptera,,,,,
+Tenthredo et autres,Les Tenthrèdes noir et jaune,Hymenoptera,Tenthredinoidea,Tenthredinidae,Tenthredininae,Tenthredo,
+plusieurs Adelidae,Les Adèles unies,Lepidoptera,Incurvarioidea,Adelidae,,,
+Cimbicidae,Les Cimbicides,Hymenoptera,Tenthredinoidea,Cimbicidae,,,
+"Dorycera, Otites",Les Ulidides allongés,Diptera,Tephritoidea,Ulidiidae,Otitinae,Otites,
+Scraptiidae,Les Scraptides,Coleoptera,Tenebrionoidea,Scraptiidae,,,
+Araschnia levana,La Carte géographique forme orangé,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Araschnia,Araschnia levana
+Coenonympha,Les Fadets sans bande blanche,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Coenonympha,
+Callophrys rubi,Le Thécla de la Ronce,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Callophrys,Callophrys rubi
+"Tenthredo, Rhogogaster",Les Tenthrèdes vert et noir,Hymenoptera,Tenthredinoidea,Tenthredinidae,Tenthredininae,Rhogogaster,
+Dicranocephalus,Les Dicranocéphales,Hemiptera,Coreoidea,Stenocephalidae,,Dicranocephalus,
+plusieurs Adelidae,Les Adèles à motifs,Lepidoptera,Incurvarioidea,Adelidae,,,
+Mordellidae,Les Mordelles,Coleoptera,Tenebrionoidea,Mordellidae,,,
+Scatopsidae,Les Scatopsides,Diptera,Scatopsoidea,Scatopsidae,,,
+Melitaea cinxia,La Mélitée du Plantain,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Melitaea,Melitaea cinxia
+"Polyommatus, Plebeius et autres",Les Azurés marrons à chevrons oranges,Lepidoptera,Papilionoidea,Lycaenidae,,,
+Colias,Le Souci et autres,Lepidoptera,Papilionoidea,Pieridae,Coliadinae,Colias,
+Malachius et autres,Les Malachides à points rouges,Coleoptera,Cleroidea,Melyridae,Malachiinae,Malachius,
+Geometridae,Les Géomètres,Lepidoptera,Geometroidea,Geometridae,,,
+Cantharis,Les Cantharides,Coleoptera,Elateroidea,Cantharidae,Cantharinae,Cantharis,
+Phalangiidae,Les Opilions,Opiliones,Phalangioidea,Phalangiidae,,,
+Platystoma,Les Mouches Platystoma,Diptera,Tephritoidea,Platystomatidae,Platystomatinae,Platystoma,
+Coccinellidae,Les larves de Coccinelles,Coleoptera,Coccinelloidea,Coccinellidae,,,
+Ceratina cucurbitina,L'Abeille Ceratina noire,Hymenoptera,Apoidea,Apidae,Xylocopinae,Ceratina,Ceratina cucurbitina
+Lycaena tityrus,L'Argus myope (mâle),Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,Lycaena tityrus
+Valgus hemipterus,La Valgue hémiptère,Coleoptera,Scarabaeoidea,Scarabaeidae,Valginae,Valgus,Valgus hemipterus
+Ampedus et autres,Les Taupins unis,Coleoptera,Elateroidea,Elateridae,Elaterinae,Ampedus,
+Hylaeus,Les Abeilles Hylaeus à taches blanches,Hymenoptera,Apoidea,Colletidae,Hylaeinae,Hylaeus,
+Trichodes octopunctatus,Le Clairon à 8 points,Coleoptera,Cleroidea,Cleridae,Clerinae,Trichodes,Trichodes octopunctatus
+"Delta, Discoelius, Eumenes",Les Guêpes maçonnes à abdomen long,Hymenoptera,Vespoidea,Vespidae,Eumeninae,Eumenes,
+"Ectophasia, Phasia",Les Tachinaires fauves à abdomen aplati,Diptera,Oestroidea,Tachinidae,Phasiinae,Phasia,
+Anthaxia et autres,Les Buprestes unis brillants,Coleoptera,Buprestoidea,Buprestidae,Buprestinae,Anthaxia,
+Ceratina,Les Abeilles Ceratina bleutées,Hymenoptera,Apoidea,Apidae,Xylocopinae,Ceratina,
+Anthaxia,L'Anthaxie demi-cuivrée et autres,Coleoptera,Buprestoidea,Buprestidae,Buprestinae,Anthaxia,
+Papilio machaon,Le Machaon,Lepidoptera,Papilionoidea,Papilionidae,Papilioninae,Papilio,Papilio machaon
+"Nomioides, Celhalictus",Les Halictes noir et jaune,Hymenoptera,Apoidea,Halictidae,,,
+Eurydema oleracea,La Punaise du Chou,Hemiptera,Pentatomoidea,Pentatomidae,Pentatominae,Eurydema,Eurydema oleracea
+plusieurs Dasytidae,Les Dasytides bleus et verts,Coleoptera,Cleroidea,Melyridae,,,
+Elateridae,Les Taupins mouchetés,Coleoptera,Elateroidea,Elateridae,,,
+Protaetia,Les Cétoines métalliques unies,Coleoptera,Scarabaeoidea,Scarabaeidae,Cetoniinae,Protaetia,
+Diaea,Les Araignées crabes Diaea,Araneae,,Thomisidae,,Diaea,
+"Ammophila, Hoplammophila",Les Ammophiles,Hymenoptera,Apoidea,Sphecidae,Ammophilinae,Hoplammophila,
+Asilidae,Les Asilides,Diptera,Asiloidea,Asilidae,,,
+Curculio et autres,Les Balanins,Coleoptera,Curculionoidea,Curculionidae,Curculioninae,Curculio,
+Clytus et autres,Les Clytes noir et jaune,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Clytus,
+"Anisoplia, Phyllopertha",Les Hannetons,Coleoptera,Scarabaeoidea,Scarabaeidae,Rutelinae,Phyllopertha,
+Graphosoma lineatum,Le Pentatome rayé,Hemiptera,Pentatomoidea,Pentatomidae,Podopinae,Graphosoma,Graphosoma lineatum
+Euclidia glyphica,La Doublure jaune,Lepidoptera,Noctuoidea,Erebidae,Erebinae,Euclidia,Euclidia glyphica
+Sphex et autres,Les Sphégiens à abdomen orange et noir,Hymenoptera,Apoidea,Sphecidae,Sphecinae,Sphex,
+Physophora et autres,Les Ulidides métalliques,Siphonophorae,,Physophoridae,,Physophora,
+Noctuidae,Les Noctuelles,Lepidoptera,Noctuoidea,Noctuidae,,,
+Elateridae,Les Taupins,Coleoptera,Elateroidea,Elateridae,,,
+Zerynthia polyxena,La Diane,Lepidoptera,Papilionoidea,Papilionidae,Parnassiinae,Zerynthia,Zerynthia polyxena
+Pyrgus et autres,Les Hespéries brunes à taches,Lepidoptera,Hesperioidea,Hesperiidae,Pyrginae,Pyrgus,
+Bibio hortulanus,Le Bibion précoce (femelle),Diptera,Bibionoidea,Bibionidae,Bibioninae,Bibio,Bibio hortulanus
+Oedemera,Les Oedemères noirs,Coleoptera,Tenebrionoidea,Oedemeridae,,Oedemera,
+Melitaea phoebe,Le Grand Damier,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Melitaea,Melitaea phoebe
+Anthaxia et autres,Les Buprestes unis ternes,Coleoptera,Buprestoidea,Buprestidae,Buprestinae,Anthaxia,
+Spilostethus saxatilis,La Punaise à damier,Hemiptera,Lygaeoidea,Lygaeidae,Lygaeinae,Spilostethus,Spilostethus saxatilis
+Cydnidae,Les Cydnides à motifs,Hemiptera,Pentatomoidea,Cydnidae,,,
+Oedemera,Les Oedemères verts,Coleoptera,Tenebrionoidea,Oedemeridae,,Oedemera,
+Pyrochroa serraticornis,Le Cardinal à tête rouge,Coleoptera,Tenebrionoidea,Pyrochroidae,,Pyrochroa,Pyrochroa serraticornis
+Phymata crassipes,La Punaise guitare,Hemiptera,Reduvioidea,Phymatidae,Phymatinae,Phymata,Phymata crassipes
+Andrena morio,L'Andrène noire,Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,Andrena morio
+Rhagonycha,Les Téléphores fauves à thorax noir,Coleoptera,Elateroidea,Cantharidae,Cantharinae,Rhagonycha,
+Panorpidae,Les Panorpes,Mecoptera,,Panorpidae,,,
+Cydnidae,Les Cydnides unis,Hemiptera,Pentatomoidea,Cydnidae,,,
+Sapygidae,Les Sapygides,Hymenoptera,Pompiloidea,Sapygidae,,,
+Ampedus et autres,Les Taupins rouges,Coleoptera,Elateroidea,Elateridae,Elaterinae,Ampedus,
+"Phyllobius, Polydrusus",Les Charançons verts,Coleoptera,Curculionoidea,Curculionidae,Entiminae,Polydrusus,
+Dinoptera collaris,Le Dinoptère,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Dinoptera,Dinoptera collaris
+Cerambyx scopolii,Le Petit Capricorne,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Cerambyx,Cerambyx scopolii
+Limenitis,Les Sylvains,Lepidoptera,Papilionoidea,Nymphalidae,Limenitidinae,Limenitis,
+Tropidothorax leucopterus,La Lygée familière,Hemiptera,Lygaeoidea,Lygaeidae,Lygaeinae,Tropidothorax,Tropidothorax leucopterus
+Sargus et autres,Les Stratiomes métalliques fins,Diptera,,Stratiomyidae,Sarginae,Sargus,
+Tephritidae et autres,Les Téphritides sans taches,Diptera,Tephritoidea,Tephritidae,,,
+Labidostomis,Les Labidostomes,Coleoptera,Chrysomeloidea,Chrysomelidae,Clytrinae,Labidostomis,
+Trichodes apiarius,Le Clairon des abeilles,Coleoptera,Cleroidea,Cleridae,Clerinae,Trichodes,Trichodes apiarius
+Calameuta pygmaea,Le Céphide à abdomen orange,Hymenoptera,Cephoidea,Cephidae,,Calameuta,Calameuta pygmaea
+"Lysandra, Plebejus, Polyommatus",Les Azurés bleus à chevrons oranges,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Polyommatus,
+Hemaris fuciformis,Le Sphinx gazé,Lepidoptera,Bombycoidea,Sphingidae,Macroglossinae,Hemaris,Hemaris fuciformis
+Chrysididae,Les Chrysides,Hymenoptera,Chrysidoidea,Chrysididae,,,
+Chloromyia,Les Chloromyies,Diptera,,Stratiomyidae,Sarginae,Chloromyia,
+Gasteruption,Les Gastéruptions,Hymenoptera,Evanioidea,Gasteruptiidae,,Gasteruption,
+Anthidium et autres,Les Anthidies,Hymenoptera,Apoidea,Megachilidae,Megachilinae,Anthidium,
+Clytra et autres,Les Clytres et autres,Coleoptera,Chrysomeloidea,Chrysomelidae,Clytrinae,Clytra,
+Anthaxia,L'Anthaxie hongroise (mâle) et autres,Coleoptera,Buprestoidea,Buprestidae,Buprestinae,Anthaxia,
+Pseudophilotes baton,L'Azuré du Thym (femelle),Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Pseudophilotes,Pseudophilotes baton
+Melitaea didyma,La Mélitée orangée,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Melitaea,Melitaea didyma
+Cephidae,Les Céphides (autres),Hymenoptera,Cephoidea,Cephidae,,,
+Scutelleridae,Les Scutellerides,Hemiptera,Pentatomoidea,Scutelleridae,,,
+Acmaeops et autres,Les Longicornes rouges au thorax noir,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Acmaeops,
+Physocephala,Les Conopides à abdomen rétréci,Diptera,Conopoidea,Conopidae,Conopinae,Physocephala,
+Himacerus mirmicoides,Le juvénile d'Himacerus,Hemiptera,Cimicoidea,Nabidae,Nabinae,Himacerus,Himacerus mirmicoides
+"Cantharis, Obrium et autres",Les Longicornes entièrement fauves,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Obrium,
+Agapanthia cardui,L'Agapanthie des Chardons,Coleoptera,Chrysomeloidea,Cerambycidae,Lamiinae,Agapanthia,Agapanthia cardui
+Lycaena,Les Cuivrés,Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,
+Chiasmia clathrata,Le Géomètre à barreaux,Lepidoptera,Geometroidea,Geometridae,Ennominae,Chiasmia,Chiasmia clathrata
+Mycterus,Les Myctères,Coleoptera,Tenebrionoidea,Mycteridae,,Mycterus,
+Dermaptera,Les Perce-oreilles,Dermaptera,,,,,
+Zygaena,Les Zygènes à taches simples,Lepidoptera,Zygaenoidea,Zygaenidae,Zygaeninae,Zygaena,
+Raphidiidae,Les Raphidies,Raphidioptera,,Raphidiidae,,,
+Anthocomus fasciatus,Le Malachide à bandes rouges,Coleoptera,Cleroidea,Melyridae,Malachiinae,Anthocomus,Anthocomus fasciatus
+Trichopoda pennipes,Le Trichopode,Diptera,Oestroidea,Tachinidae,Phasiinae,Trichopoda,Trichopoda pennipes
+Alosterna tabacicolor,Le Grammoptère couleur de tabac,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Alosterna,Alosterna tabacicolor
+"Odontomyia, Oplodontha",Les Stratiomes verts,Diptera,,Stratiomyidae,Stratiomyinae,Oplodontha,
+Volucella pellucens,La Volucelle transparente,Diptera,Syrphoidea,Syrphidae,Eristalinae,Volucella,Volucella pellucens
+Cantharis et autres,Les Longicornes noirs au thorax rouge,Coleoptera,Elateroidea,Cantharidae,Cantharinae,Cantharis,
+Rhagium,Les Rhagies,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Rhagium,
+Athalia rosae,L'Athalie des roses,Hymenoptera,Tenthredinoidea,Athaliidae,,Athalia,Athalia rosae
+Rhagonycha fulva et autres,Le Téléphore fauve et autres,Coleoptera,Elateroidea,Cantharidae,Cantharinae,Rhagonycha,Rhagonycha fulva
+Cupido et autres,Les Azurés marrons sans chevrons oranges,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Cupido,
+Byturus tomentosus,Le Byturide aux petits yeux,Coleoptera,Cleroidea,Byturidae,,Byturus,Byturus tomentosus
+"Anogcodes, Oedemera",Les Oedemères fauves (Alpes et Pyrénées),Coleoptera,Tenebrionoidea,Oedemeridae,,Oedemera,
+"Anogcodes, Oedemera",Les Oedemères fauves,Coleoptera,Tenebrionoidea,Oedemeridae,,Oedemera,
+"Exosoma, Lilioceris lilii",Le Criocère du Lis et autres,Coleoptera,Chrysomeloidea,Chrysomelidae,Criocerinae,Lilioceris,Lilioceris lilii
+Opsilia coerulescens,La Phytoécie bleuâtre,Coleoptera,Chrysomeloidea,Cerambycidae,Lamiinae,Opsilia,Opsilia coerulescens
+Melitaea et autres,Les Mélitées et Damiers autres,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Melitaea,
+Anoplodera sexguttata,La Lepture à 6 taches,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Anoplodera,Anoplodera sexguttata
+Hoplia argentea,L'Hoplie argentée,Coleoptera,Scarabaeoidea,Scarabaeidae,Melolonthinae,Hoplia,Hoplia argentea
+Vespa crabro,Le Frelon européen,Hymenoptera,Vespoidea,Vespidae,Vespinae,Vespa,Vespa crabro
+Volucella inflata,La Volucelle enflée,Diptera,Syrphoidea,Syrphidae,Eristalinae,Volucella,Volucella inflata
+Rutpela maculata,La Lepture tachetée,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Rutpela,Rutpela maculata
+Leptura et autres,Les Longicornes à bandes,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Leptura,
+Panurgus,Les Abeilles Panurgus,Hymenoptera,Apoidea,Andrenidae,Panurginae,Panurgus,
+Ropalopus et autres,Les Longicornes noirs aux pattes rouges,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Ropalopus,
+Colletidae,Les Collètes (autres),Hymenoptera,Apoidea,Colletidae,,,
+"Anogcodes, Ischnomera",Les Oedemères variés,Coleoptera,Tenebrionoidea,Oedemeridae,,Ischnomera,
+Aporia crataegi,Le Gazé,Lepidoptera,Papilionoidea,Pieridae,Pierinae,Aporia,Aporia crataegi
+Bombylella atra,Le Bombyle Atra,Diptera,Asiloidea,Bombyliidae,,Bombylella,Bombylella atra
+Isomira et autres,Les Tenebrions marrons,Coleoptera,Tenebrionoidea,Tenebrionidae,Alleculinae,Isomira,
+Hemipenthes morio,L'Anthracine morio,Diptera,Asiloidea,Bombyliidae,Anthracinae,Hemipenthes,Hemipenthes morio
+Hemaris tityus,Le Sphinx-Bourdon,Lepidoptera,Bombycoidea,Sphingidae,Macroglossinae,Hemaris,Hemaris tityus
+Stenopterus,Les Sténoptères fauves,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Stenopterus,
+"Chrysanthia, Ischnomera",Les Chrysanthies et autres,Coleoptera,Tenebrionoidea,Oedemeridae,,Ischnomera,
+Tachina grossa,La Tachinaire corpulente,Diptera,Oestroidea,Tachinidae,Tachininae,Tachina,Tachina grossa
+Glaucopsyche alexis,L'Azuré des Cytises,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Glaucopsyche,Glaucopsyche alexis
+Protaetia,Les Cétoines sombres glabres,Coleoptera,Scarabaeoidea,Scarabaeidae,Cetoniinae,Protaetia,
+Ephemeroptera,Les Ephémères,Ephemeroptera,,,,,
+"Donacia, Plateumaris",Les Chrysomèles allongées des milieux humides,Coleoptera,Chrysomeloidea,Chrysomelidae,Donaciinae,Plateumaris,
+Temnostoma bombylans,La Milésie bourdon,Diptera,Syrphoidea,Syrphidae,Eristalinae,Temnostoma,Temnostoma bombylans
+Pachyta et autres,Les Pachytes,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Pachyta,
+Stictoleptura cordigera et autres,Les Longicornes porte-coeur,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Stictoleptura,Stictoleptura cordigera
+"Ochlodes, Thymelicus",Les Hespéries fauves,Lepidoptera,Hesperioidea,Hesperiidae,Hesperiinae,Thymelicus,
+Hamearis lucina,La Lucine,Lepidoptera,Papilionoidea,Riodinidae,Nemeobiinae,Hamearis,Hamearis lucina
+Emmelia trabealis,L'Arlequinette jaune,Lepidoptera,Noctuoidea,Noctuidae,Acontiinae,Emmelia,Emmelia trabealis
+Paracorymbia fulva et autres,Les Leptures fauves,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Paracorymbia,Paracorymbia fulva
+Eilema,Les Lithosies et Manteaux,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Eilema,
+Stenurella melanura,La Lepture à suture noire,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Stenurella,Stenurella melanura
+Trichius,Les Trichies,Coleoptera,Scarabaeoidea,Scarabaeidae,Cetoniinae,Trichius,
+Siona lineata,La Divisée,Lepidoptera,Geometroidea,Geometridae,Ennominae,Siona,Siona lineata
+Anaglyptus mysticus,Le Clyte mystique,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Anaglyptus,Anaglyptus mysticus
+Zygaena,Les Zygènes à taches cerclées,Lepidoptera,Zygaenoidea,Zygaenidae,Zygaeninae,Zygaena,
+Maniola jurtina,Le Myrtil,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Maniola,Maniola jurtina
+"Anogcodes, Oedemera",Les Oedemères fauves (de méditerranée),Coleoptera,Tenebrionoidea,Oedemeridae,,Oedemera,
+Acmaeodera et autres,Les Buprestes à points,Coleoptera,Buprestoidea,Buprestidae,Polycestinae,Acmaeodera,
+Trichodes leucopsideus,Le Clairon commun,Coleoptera,Cleroidea,Cleridae,Clerinae,Trichodes,Trichodes leucopsideus
+Maniola jurtina et autres,Le Myrtil et autres (Méditerranée),Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Maniola,Maniola jurtina
+Zygaena lavandulae,La Zygène de la Badasse,Lepidoptera,Zygaenoidea,Zygaenidae,Zygaeninae,Zygaena,Zygaena lavandulae
+Isodontia mexicana,Le Sphégien noir à ailes fumées,Hymenoptera,Apoidea,Sphecidae,Sphecinae,Isodontia,Isodontia mexicana
+Therevidae,Les Thérèves,Diptera,Asiloidea,Therevidae,,,
+Megalodontes,Les Megalodontides,Hymenoptera,Pamphilioidea,Megalodontesidae,,Megalodontes,
+Chrysopidae,Les larves de Chrysopes,Neuroptera,,Chrysopidae,,,
+Cassida,Les Cassides,Coleoptera,Chrysomeloidea,Chrysomelidae,Cassidinae,Cassida,
+Sesiidae,Les Sésies,Lepidoptera,Sesioidea,Sesiidae,,,
+Lycaena dispar,Le Cuivré des marais (mâle),Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,Lycaena dispar
+Thyris fenestrella,Le Sphinx pygmée,Lepidoptera,Pyraloidea,Thyrididae,Thyridinae,Thyris,Thyris fenestrella
+Coenonympha,Les Fadets à bande blanche,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Coenonympha,
+Agapanthia,Les Agapanthies fauves,Coleoptera,Chrysomeloidea,Cerambycidae,Lamiinae,Agapanthia,
+Coenonympha arcania,Le Céphale,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Coenonympha,Coenonympha arcania
+Glaphyra et autres,Les Molorches et autres,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Glaphyra,
+Erebia,Les Moirés à dessous sombre,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Erebia,
+Megachile,Les Mégachiles à pattes blanches (mâles),Hymenoptera,Apoidea,Megachilidae,Megachilinae,Megachile,
+"Adscita, Jordanita",Les Turquoises,Lepidoptera,Zygaenoidea,Zygaenidae,Procridinae,Jordanita,
+Boudinotiana et autres,"L'Intruse, l'Illégitime et la Bréphine",Lepidoptera,Geometroidea,Geometridae,Archiearinae,Boudinotiana,
+Sphex et autres,Les Sphégiens noirs,Hymenoptera,Apoidea,Sphecidae,Sphecinae,Sphex,
+Pyrgus et autres,Les Hespéries brunes à taches (montagne),Lepidoptera,Hesperioidea,Hesperiidae,Pyrginae,Pyrgus,
+Lixus et autres,Les Charançons longs,Coleoptera,Curculionoidea,Curculionidae,Lixinae,Lixus,
+"Hycleus, Mylabris",Les Mylabres à bandes,Coleoptera,Tenebrionoidea,Meloidae,Meloinae,Mylabris,
+Odezia atrata,Le Ramoneur,Lepidoptera,Geometroidea,Geometridae,Larentiinae,Odezia,Odezia atrata
+Pseudopanthera macularia,La Panthère,Lepidoptera,Geometroidea,Geometridae,Ennominae,Pseudopanthera,Pseudopanthera macularia
+Cerocoma,Les Cerocomes,Coleoptera,Tenebrionoidea,Meloidae,Meloinae,Cerocoma,
+Villa,Les Anthracines Villa,Diptera,Asiloidea,Bombyliidae,Anthracinae,Villa,
+Coelioxys et autres,Les Mégachiles coucou,Hymenoptera,Apoidea,Megachilidae,Megachilinae,Coelioxys,
+Cerceris,Les Guêpes Cerceris,Hymenoptera,Apoidea,Crabronidae,Philanthinae,Cerceris,
+Megascolia maculata,La Scolie des jardins (femelle),Hymenoptera,Scolioidea,Scoliidae,,Megascolia,Megascolia maculata
+Zygaena,Les Zygènes rouges,Lepidoptera,Zygaenoidea,Zygaenidae,Zygaeninae,Zygaena,
+Volucella zonaria,La Volucelle zonée,Diptera,Syrphoidea,Syrphidae,Eristalinae,Volucella,Volucella zonaria
+Brintesia circe,La Silène,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Brintesia,Brintesia circe
+Lomatia,Les Lomaties,Diptera,Asiloidea,Bombyliidae,Lomatiinae,Lomatia,
+Melanargia galathea,Le Demi-Deuil,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Melanargia,Melanargia galathea
+Lycidae,Les Lycides,Coleoptera,Elateroidea,Lycidae,,,
+Cryptocephalus vittatus,Le Cryptocéphale à bandes blanches,Coleoptera,Chrysomeloidea,Chrysomelidae,Cryptocephalinae,Cryptocephalus,Cryptocephalus vittatus
+Scolia et autres,Les Scolies à taches jaunes (autres),Hymenoptera,Scolioidea,Scoliidae,,Scolia,
+Melanargia lachesis,L'Echiquier d'Ibérie,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Melanargia,Melanargia lachesis
+Anthaxia nitidula,L'Anthaxie nitidula (femelle),Coleoptera,Buprestoidea,Buprestidae,Buprestinae,Anthaxia,Anthaxia nitidula
+Plebejus,Les Azurés à taches bleues brillantes,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Plebejus,
+Chrysotoxum bicinctum,Le Chrysotoxe à double ceinture,Diptera,Syrphoidea,Syrphidae,Syrphinae,Chrysotoxum,Chrysotoxum bicinctum
+Agapanthia,Les Agapanthies violacées,Coleoptera,Chrysomeloidea,Cerambycidae,Lamiinae,Agapanthia,
+Euphydryas aurinia,Le Damier de la Succise,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Euphydryas,Euphydryas aurinia
+Lasiommata,Le Satyre et autres (montagne),Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Lasiommata,
+Noctua fimbriata,La Frangée,Lepidoptera,Noctuoidea,Noctuidae,Noctuinae,Noctua,Noctua fimbriata
+plusieurs Tabanidae,Les Taons sombres,Diptera,Tabanoidea,Tabanidae,,,
+Satyrium,Les Théclas marrons (autres),Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Satyrium,
+Delta unguiculatum,L'Eumène unguiculé,Hymenoptera,Vespoidea,Vespidae,Eumeninae,Delta,Delta unguiculatum
+Hoplia coerulea,L'Hoplie bleue,Coleoptera,Scarabaeoidea,Scarabaeidea,Melolonthinae,Hoplia,Hoplia coerulea
+Meromyza,Les Chloropides jaunes à fémurs enflés,Diptera,Carnoidea,Chloropidae,Chloropinae,Meromyza,
+Blattellidae,Les Blattes,Blattodea,Blaberoidea,Blattellidae,,,
+Melitaea diamina,Le Damier noir,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Melitaea,Melitaea diamina
+Chlorophorus,Le Clyte figuré,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Chlorophorus,
+Clanoptilus,Les Malachides sombres,Coleoptera,Cleroidea,Melyridae,Malachiinae,Clanoptilus,
+Hipparchia et autres,Les Agrestes,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Hipparchia,
+Carterocephalus palaemon,L'Hespérie Echiquier,Lepidoptera,Hesperioidea,Hesperiidae,Heteropterinae,Carterocephalus,Carterocephalus palaemon
+Cteniopus,Les Tenebrions jaunes,Coleoptera,Tenebrionoidea,Tenebrionidae,Alleculinae,Cteniopus,
+Nemotelus,Les Stratiomes blanc et noir,Diptera,,Stratiomyidae,Nemotelinae,Nemotelus,
+Polyommatus daphnis,L'Azuré de l'Orobe,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Polyommatus,Polyommatus daphnis
+Andrena florea,L'Andrène des fleurs,Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,Andrena florea
+Gnorimus nobilis,Le Gnorimus vert,Coleoptera,Scarabaeoidea,Scarabaeidae,Trichiinae,Gnorimus,Gnorimus nobilis
+Bembix,Les Guêpes fouisseuses,Hymenoptera,Apoidea,Crabronidae,Bembicinae,Bembix,
+Andrena albopunctata,L'Andrène à points blancs,Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,Andrena albopunctata
+Colpa quinquecincta,La Scolie sans taches jaunes,Hymenoptera,Scolioidea,Scoliidae,,Colpa,Colpa quinquecincta
+Coptosoma scutellatum,Le Coptosoma,Hemiptera,Pentatomoidea,Plataspidae,,Coptosoma,Coptosoma scutellatum
+Argynnis paphia,Le Tabac d'Espagne,Lepidoptera,Papilionoidea,Nymphalidae,Heliconiinae,Argynnis,Argynnis paphia
+Aphantopus hyperantus,Le Tristan,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Maniola,Maniola hyperantus
+Timarcha,Les Craches-sang,Coleoptera,Chrysomeloidea,Chrysomelidae,Chrysomelinae,Timarcha,
+Gaurotes virginea,Le Gaurotes vierge,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Gaurotes,Gaurotes virginea
+Exoprosopa,Les Anthracines Exoprosopa,Diptera,Asiloidea,Bombyliidae,Anthracinae,Exoprosopa,
+Lycaena hippothoe,Le Cuivré écarlate (mâle),Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,Lycaena hippothoe
+Leptura aurulenta,La Lepture couleur d'or (à antennes jaunes),Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Leptura,Leptura aurulenta
+Pyronia tithonus,L'Amaryllis,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Maniola,Maniola tithonus
+Argynnis aglaja,Le Grand Nacré,Lepidoptera,Papilionoidea,Nymphalidae,Heliconiinae,Argynnis,Argynnis aglaja
+Epeolus,Les Abeilles coucou noir et blanc à pattes rouges,Hymenoptera,Apoidea,Apidae,Nomadinae,Epeolus,
+Callicera,Les Syrphes aux antennes à bout blanc,Diptera,Syrphoidea,Syrphidae,Eristalinae,Callicera,
+Chrysops,Les Taons aux ailes tachetées,Diptera,Tabanoidea,Tabanidae,Chrysopsinae,Chrysops,
+Autographa gamma et autres,Le Gamma et autres,Lepidoptera,Noctuoidea,Noctuidae,Plusiinae,Autographa,Autographa gamma
+Coenonympha dorus,Le Fadet des garrigues,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Coenonympha,Coenonympha dorus
+Mylabris et autres,Les Mylabres à points,Coleoptera,Tenebrionoidea,Meloidae,Meloinae,Mylabris,
+Araschnia levana,La Carte géographique forme sombre,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Araschnia,Araschnia levana
+Stictoleptura rubra,La Lepture rouge (femelle),Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Stictoleptura,Stictoleptura rubra
+Graphosoma semipunctatum,Le Pentatome ponctué,Hemiptera,Pentatomoidea,Pentatomidae,Podopinae,Graphosoma,Graphosoma semipunctatum
+Hypena et autres,Les Noctuelles à museau,Lepidoptera,Noctuoidea,Erebidae,Hypeninae,Hypena,
+Sceliphron caementarium,Le Pélopée à pattes noir et jaune,Hymenoptera,Apoidea,Sphecidae,Sceliphrinae,Sceliphron,Sceliphron caementarium
+Miltochrista miniata,La Rosette,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Miltochrista,Miltochrista miniata
+Maculinea,Les Azurés des fourmis,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Phengaris,
+Lycaena virgaureae,Le Cuivré de la Verge d'or (mâle),Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,Lycaena virgaureae
+Pyronia,L'Amaryllis et l'Ocelle de la Canche,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Maniola,
+"Meria, Myzinum",Les Tiphides,Hymenoptera,Tiphioidea,Tiphiidae,Myzininae,Myzinum,
+Chlorophorus varius,Le Clyte varié,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Chlorophorus,Chlorophorus varius
+Laphria,Les Asilides velues,Diptera,Asiloidea,Asilidae,Laphriinae,Laphria,
+Cacyreus marshalli,Le Brun des Pélargoniums,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Cacyreus,Cacyreus marshalli
+Thyreus et autres,Les Abeilles coucou noir et blanc,Hymenoptera,Apoidea,Apidae,Apinae,Thyreus,
+Minois dryas,Le Grand Nègre des bois,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Minois,Minois dryas
+Hemipenthes maura,L'Anthracine maura,Diptera,Asiloidea,Bombyliidae,,Hemipenthes,Hemipenthes maura
+Temnostoma vespiforme,La Milésie vespiforme,Diptera,Syrphoidea,Syrphidae,Eristalinae,Temnostoma,Temnostoma vespiforme
+Erebia,Les Moirés à bande blanche,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Erebia,
+Leptura aurulenta,La Lepture couleur d'or (à antennes noires),Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Leptura,Leptura aurulenta
+Coptocephala,Les Coptocéphales,Coleoptera,Chrysomeloidea,Chrysomelidae,Clytrinae,Coptocephala,
+Aricia nicias,L'Azuré des Géraniums,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Aricia,Aricia nicias
+Prionyx kirbii,"Le Sphégien à abdomen orange, noir et blanc",Hymenoptera,Apoidea,Sphecidae,Sphecinae,Prionyx,Prionyx kirbii
+Pyrochroa coccinea,Le Cardinal à tête noire,Coleoptera,Tenebrionoidea,Pyrochroidae,,Pyrochroa,Pyrochroa coccinea
+Camptogramma bilineata,La Brocatelle d'or,Lepidoptera,Geometroidea,Geometridae,Larentiinae,Camptogramma,Camptogramma bilineatum
+"Atylotus, Silvius",Les Taons clairs,Diptera,Tabanoidea,Tabanidae,Chrysopsinae,Silvius,
+Chlorophorus trifasciatus,Le Clyte à 3 bandes,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Chlorophorus,Chlorophorus trifasciatus
+Erebia,Les Moirés à dessous marbré,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Erebia,
+Hesperia comma,La Virgule,Lepidoptera,Hesperioidea,Hesperiidae,Hesperiinae,Hesperia,Hesperia comma
+Euclidia mi,Le M noir,Lepidoptera,Noctuoidea,Erebidae,Erebinae,Euclidia,Euclidia mi
+Anasimyia,Les Syrphes Anasimyia,Diptera,Syrphoidea,Syrphidae,Eristalinae,Anasimyia,
+Micropterix,Les Micropterix,Lepidoptera,,Micropterigidae,,Micropterix,
+Colpa sexmaculata,La Scolie Colpa (mâle),Hymenoptera,Scolioidea,Scoliidae,,Colpa,Colpa sexmaculata
+Milesia crabroniformis,La Milésie frelon,Diptera,Syrphoidea,Syrphidae,Eristalinae,Milesia,Milesia crabroniformis
+Colpa sexmaculata,La Scolie Colpa (femelle),Hymenoptera,Scolioidea,Scoliidae,,Colpa,Colpa sexmaculata
+Callimus angulatus,Le Capricorne Callimus,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Callimus,Callimus angulatus
+Tiphia femorata,La Tiphide aux pattes rouges,Hymenoptera,Tiphioidea,Tiphiidae,Tiphiinae,Tiphia,Tiphia femorata
+Toxophora,Les Toxophores,Diptera,Asiloidea,Bombyliidae,Toxophorinae,Toxophora,
+Euplagia quadripunctaria,L'Ecaille chinée,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Euplagia,Euplagia quadripunctaria
+Hemipenthes velutina,L'Anthracine velutina,Diptera,Asiloidea,Bombyliidae,,Hemipenthes,Hemipenthes velutina
+Oecanthus pellucens,Le Grillon d'Italie,Orthoptera,Grylloidea,Gryllidae,Oecanthinae,Oecanthus,Oecanthus pellucens
+Volucella inanis,La Volucelle vide,Diptera,Syrphoidea,Syrphidae,Eristalinae,Volucella,Volucella inanis
+Polyommatus,Les Sablés,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Polyommatus,
+Parnassius,Les Apollons,Lepidoptera,Papilionoidea,Papilionidae,Parnassiinae,Parnassius,
+Oxycera,Les Oxycères,Diptera,,Stratiomyidae,Stratiomyinae,Oxycera,
+Cupido argiades,L'Azuré du Trèfle,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Cupido,Cupido argiades
+Pleuroptya ruralis,La Pyrale du Houblon,Lepidoptera,Pyraloidea,Crambidae,Spilomelinae,Patania,Patania ruralis
+Idaea aureolaria,L'Acidalie double-ceinture,Lepidoptera,Geometroidea,Geometridae,Sterrhinae,Idaea,Idaea aureolaria
+Vespula rufa,La Guêpe rousse,Hymenoptera,Vespoidea,Vespidae,Vespinae,Vespula,Vespula rufa
+"Lampides, Leptotes",Les Azurés migrateurs,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Leptotes,
+Lycaena virgaureae,Le Cuivré de la Verge d'or (femelle),Lepidoptera,Papilionoidea,Lycaenidae,Lycaeninae,Lycaena,Lycaena virgaureae
+Baccha elongata,La Baccha allongée,Diptera,Syrphoidea,Syrphidae,Syrphinae,Baccha,Baccha elongata
+Malachius et autres,Les Malachides rouges,Coleoptera,Cleroidea,Melyridae,Malachiinae,Malachius,
+Andrena marginata,L'Andrène marginée,Hymenoptera,Apoidea,Andrenidae,Andreninae,Andrena,Andrena marginata
+Stenopterus,Les Sténoptères noirs,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Stenopterus,
+Nymphalis antiopa,Le Morio,Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Nymphalis,Nymphalis antiopa
+Lepturobosca virens,La Lepture verdâtre,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Lepturobosca,Lepturobosca virens
+Heriaeus,Les Araignées crabes velues,Araneae,,Thomisidae,,Heriaeus,
+Colletes hederae,La Collète du Lierre,Hymenoptera,Apoidea,Colletidae,Colletinae,Colletes,Colletes hederae
+Abia fasciata,L'Abia fasciata,Hymenoptera,Tenthredinoidea,Cimbicidae,,Abia,Abia fasciata
+Thecla betulae,Le Thécla du Bouleau,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Thecla,Thecla betulae
+Satyrium spini,Le Thécla des Nerpruns,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Satyrium,Satyrium spini
+Anthidium punctatum,L'Anthidie à points,Hymenoptera,Apoidea,Megachilidae,Megachilinae,Anthidium,Anthidium punctatum
+Mutillidae,Les Mutilles (femelles),Hymenoptera,Pompiloidea,Mutillidae,,,
+Odontomyia,Les Stratiomes fauves,Diptera,,Stratiomyidae,Stratiomyinae,Odontomyia,
+Glaucopsyche melanops,L'Azuré de la Badasse,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Glaucopsyche,Glaucopsyche melanops
+Eupithecia et autres,Les Eupithécies,Lepidoptera,Geometroidea,Geometridae,Larentiinae,Eupithecia,
+Hipparchia fidia,Le Chevron blanc,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Hipparchia,Hipparchia fidia
+Mutilla europaea,La Mutille européenne (mâle),Hymenoptera,Pompiloidea,Mutillidae,Mutillinae,Mutilla,Mutilla europaea
+Papilio hospiton,Le Porte-queue de Corse,Lepidoptera,Papilionoidea,Papilionidae,Papilioninae,Papilio,Papilio hospiton
+Dascillus cervinus,Le Dascillide,Coleoptera,Dascilloidea,Dascillidae,,Dascillus,Dascillus cervinus
+Zygaena rhadamanthus,La Zygène de l'Esparcette,Lepidoptera,Zygaenoidea,Zygaenidae,Zygaeninae,Zygaena,Zygaena rhadamanthus
+Ptinomorphus imperialis,Le Ptinomorphe impérial,Coleoptera,Bostrichoidea,Ptinidae,Eucradinae,Ptinomorphus,Ptinomorphus imperialis
+Anthocharis euphenoides,L'Aurore de Provence (mâle),Lepidoptera,Papilionoidea,Pieridae,Pierinae,Anthocharis,Anthocharis euphenoides
+Scolitantides orion,L'Azuré des Orpins,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Scolitantides,Scolitantides orion
+Acmaeodera pilosellae,L'Acméodère de la Piloselle,Coleoptera,Buprestoidea,Buprestidae,Polycestinae,Acmaeodera,Acmaeodera pilosellae
+Thanatus,Les Araignées crabes Thanatus,Araneae,,Philodromidae,,Thanatus,
+Stratiomys longicornis,Le Stratiome terne,Diptera,,Stratiomyidae,Stratiomyinae,Stratiomys,Stratiomys longicornis
+Ancyrosoma leucogrammes,La Punaise Ancyrosoma,Hemiptera,Pentatomoidea,Pentatomidae,Podopinae,Ancyrosoma,Ancyrosoma leucogrammes
+Maculinea nausithous,L'Azuré des Paluds,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Phengaris,Phengaris nausithous
+Purpuricenus,Les Purpuricènes,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Purpuricenus,
+Pyronia bathseba,L'Ocelle rubanné,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Maniola,Maniola bathseba
+"Malthinus, Malthodes",Les Malthinus et Malthodes à points jaunes,Coleoptera,Elateroidea,Cantharidae,Malthininae,Malthodes,
+Ptosima undecimmaculata,Le Bupreste à taches jaunes,Coleoptera,Buprestoidea,Buprestidae,Polycestinae,Ptosima,Ptosima undecimmaculata
+Eurrhypara hortulata,La Pyrale de l'Ortie,Lepidoptera,Pyraloidea,Crambidae,Pyraustinae,Eurrhypara,Eurrhypara hortulata
+Cyrtus gibbus,Le Cyrtus,Diptera,Nemestrinoidea,Acroceridae,,Cyrtus,Cyrtus gibbus
+Agriades glandon,Les Azurés de haute montagne (Alpes),Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Agriades,Agriades glandon
+Sceliphron,Les Pélopées à pétiole jaune,Hymenoptera,Apoidea,Sphecidae,Sceliphrinae,Sceliphron,
+Satyrium w-album,Le Thécla de l'Orme,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Satyrium,Satyrium w-album
+Chorosoma schillingii,Le Chorosome,Hemiptera,Coreoidea,Rhopalidae,,Chorosoma,Chorosoma schillingii
+Euphydryas cynthia,Le Damier de l'Alchémille (mâle),Lepidoptera,Papilionoidea,Nymphalidae,Nymphalinae,Euphydryas,Euphydryas cynthia
+Lithosia quadra,La Lithosie quadrille (femelle),Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Lithosia,Lithosia quadra
+Eumedonia eumedon,L'Argus de la Sanguinaire,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Eumedonia,Eumedonia eumedon
+Zanclognatha,Les Herminies,Lepidoptera,Noctuoidea,Erebidae,Herminiinae,Zanclognatha,
+Milesia semiluctifera,La Milésie bigarée,Diptera,Syrphoidea,Syrphidae,Eristalinae,Milesia,Milesia semiluctifera
+Angerona prunaria,L'Angéronie du Prunier,Lepidoptera,Geometroidea,Geometridae,Ennominae,Angerona,Angerona prunaria
+Myrmus miriformis,Le Myrmus,Hemiptera,Coreoidea,Rhopalidae,,Myrmus,Myrmus miriformis
+Zerynthia rumina,La Proserpine,Lepidoptera,Papilionoidea,Papilionidae,Parnassiinae,Zerynthia,Zerynthia rumina
+Pseudophilotes baton,L'Azuré du Thym (mâle),Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Pseudophilotes,Pseudophilotes baton
+Conophorus,Les Conophores,Diptera,Asiloidea,Bombyliidae,Bombyliinae,Conophorus,
+Calambus bipustulatus,Le Taupin à 2 taches,Coleoptera,Elateroidea,Elateridae,Prosterninae,Calambus,Calambus bipustulatus
+Timandra comae,La Timandre aimée,Lepidoptera,Geometroidea,Geometridae,Sterrhinae,Timandra,Timandra comae
+Melanargia occitanica,L'Echiquier d'Occitanie,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Melanargia,Melanargia occitanica
+Satyrium pruni,Le Thécla du Prunier,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Satyrium,Satyrium pruni
+Stratiomys singularior,Le Stratiome singularior,Diptera,,Stratiomyidae,Stratiomyinae,Stratiomys,Stratiomys singularior
+Amata,Les Syntomies,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Amata,
+Coenonympha corinna,Le Fadet tyrrhénien,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Coenonympha,Coenonympha corinna
+Danaus chrysippus,Le Petit Monarque,Lepidoptera,Papilionoidea,Nymphalidae,Danainae,Danaus,Danaus chrysippus
+Nudaria mundana,La Mondaine,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Nudaria,Nudaria mundana
+Hipparchia et autres,Les Agrestes (Corse),Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Hipparchia,
+Mutillidae,Les Mutilles (autres mâles),Hymenoptera,Pompiloidea,Mutillidae,,,
+Aromia moschata,L'Aromie musquée,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Aromia,Aromia moschata
+Setina aurita,L'Ecaille alpine,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Setina,Setina aurita
+Sceliphron curvatum,Le Pélopée à pattes roussâtres,Hymenoptera,Apoidea,Sphecidae,Sceliphrinae,Sceliphron,Sceliphron curvatum
+Pelosia,Les Lithosies muscerde et obuste,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Pelosia,
+Attagenus punctatus,Le Dermeste à points blancs,Coleoptera,Bostrichoidea,Dermestidae,Attageninae,Lanorus,Lanorus punctatus
+Usia,Les Usies,Diptera,Asiloidea,Bombyliidae,,Usia,
+Vadonia unipunctata,La Vadonie à 1 point,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Vadonia,Vadonia unipunctata
+Parnassius mnemosyne,Le Semi-Apollon,Lepidoptera,Papilionoidea,Papilionidae,Parnassiinae,Parnassius,Parnassius mnemosyne
+Erebia manto,Le Moiré variable,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Erebia,Erebia manto
+Chlorophorus pilosus,Le Clyte poilu,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Chlorophorus,Chlorophorus pilosus
+Agrius convolvuli,Le Sphinx du Liseron,Lepidoptera,Bombycoidea,Sphingidae,Sphinginae,Agrius,Agrius convolvuli
+Pyrgus sidae,L'Hespérie à bandes jaunes,Lepidoptera,Hesperioidea,Hesperiidae,Pyrginae,Pyrgus,Pyrgus sidae
+Noctua pronuba,Le Hibou,Lepidoptera,Noctuoidea,Noctuidae,Noctuinae,Noctua,Noctua pronuba
+Atolmis rubricollis,La Veuve,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Atolmis,Atolmis rubricollis
+Gnorimus variabilis,Le Gnorimus sombre,Coleoptera,Scarabaeoidea,Scarabaeidae,Trichiinae,Gnorimus,Gnorimus variabilis
+Quercusia quercus,Le Thécla du Chêne,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Hypaurotis,Hypaurotis quercus
+Argynnis pandora,Le Cardinal,Lepidoptera,Papilionoidea,Nymphalidae,Heliconiinae,Argynnis,Argynnis pandora
+Deilephila porcellus,Le Petit Sphinx de la Vigne,Lepidoptera,Bombycoidea,Sphingidae,Macroglossinae,Deilephila,Deilephila porcellus
+"Paidia, Thumatha",Les Lithosies à ailes larges,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Thumatha,
+Aspitates ochrearia,L'Aspilate ochracée,Lepidoptera,Geometroidea,Geometridae,Ennominae,Aspitates,Aspitates ochrearia
+Utetheisa pulchella,L'Ecaille du Myosotis,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Utetheisa,Utetheisa pulchella
+Laspeyria flexula,Le Crochet,Lepidoptera,Noctuoidea,Erebidae,Erebinae,Laspeyria,Laspeyria flexula
+Clitellaria ephippium,La Clitellaire,Diptera,,Stratiomyidae,Clitellariinae,Clitellaria,Clitellaria ephippium
+Laeosopis roboris,Le Thécla du Frêne,Lepidoptera,Papilionoidea,Lycaenidae,Theclinae,Laeosopis,Laeosopis roboris
+Alucitidae,Les Alucitides,Lepidoptera,Alucitoidea,Alucitidae,,,
+Haematopota pluvialis,Le Taon des pluies,Diptera,Tabanoidea,Tabanidae,Tabaninae,Haematopota,Haematopota pluvialis
+Phlogophora meticulosa,La Méticuleuse,Lepidoptera,Noctuoidea,Noctuidae,Hadeninae,Phlogophora,Phlogophora meticulosa
+Rhagium bifasciatum,La Rhagie à 2 bandes,Coleoptera,Chrysomeloidea,Cerambycidae,Lepturinae,Rhagium,Rhagium bifasciatum
+Psodos quadrifaria,Le Ruban fauve,Lepidoptera,Geometroidea,Geometridae,Ennominae,Psodos,Psodos quadrifaria
+Chlorophorus ruficornis,Le Chlorophore soufré,Coleoptera,Chrysomeloidea,Cerambycidae,Cerambycinae,Chlorophorus,Chlorophorus ruficornis
+Laothoe populi,Le Sphinx du Peuplier,Lepidoptera,Bombycoidea,Sphingidae,Smerinthinae,Laothoe,Laothoe populi
+Callimorpha dominula,L'Ecaille marbrée,Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Callimorpha,Callimorpha dominula
+Opisthograptis luteolata,La Citronnelle rouillée,Lepidoptera,Geometroidea,Geometridae,Ennominae,Opisthograptis,Opisthograptis luteolata
+Melanargia russiae,L'Echiquier de Russie,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Melanargia,Melanargia russiae
+Aplocera,Les Rayures,Lepidoptera,Geometroidea,Geometridae,Larentiinae,Aplocera,
+Eclimus gracilis,Le Bombyle Eclimus,Diptera,Asiloidea,Bombyliidae,,Eclimus,Eclimus gracilis
+Korynetes et autres,Les Clairons brillants,Coleoptera,Cleroidea,Cleridae,Korynetinae,Korynetes,
+Papilio alexanor,L'Alexanor,Lepidoptera,Papilionoidea,Papilionidae,Papilioninae,Papilio,Papilio alexanor
+Smerinthus ocellata,Le Sphinx demi-paon,Lepidoptera,Bombycoidea,Sphingidae,Smerinthinae,Smerinthus,Smerinthus ocellata
+"Sphinx maurorum, Sphinx pinastri",Les Sphinx du Pin et mauresque,Lepidoptera,Bombycoidea,Sphingidae,Sphinginae,Sphinx,Sphinx pinastri
+Oberea erythrocephala,Le Longicorne Oberea,Coleoptera,Chrysomeloidea,Cerambycidae,Lamiinae,Oberea,Oberea erythrocephala
+Hyles livornica,Le Sphinx livournien,Lepidoptera,Bombycoidea,Sphingidae,Macroglossinae,Hyles,Hyles livornica
+Erebia,Les Moirés sans ocelles,Lepidoptera,Papilionoidea,Nymphalidae,Satyrinae,Erebia,
+Lithosia quadra,La Lithosie quadrille (mâle),Lepidoptera,Noctuoidea,Erebidae,Arctiinae,Lithosia,Lithosia quadra
+Heteropterus morpheus,Le Miroir,Lepidoptera,Hesperioidea,Hesperiidae,Heteropterinae,Heteropterus,Heteropterus morpheus
+Anarta myrtilli,La Noctuelle de la Myrtille,Lepidoptera,Noctuoidea,Noctuidae,Hadeninae,Anarta,Anarta myrtilli
+Dasyscolia ciliata,La Scolie de l'Ophrys miroir,Hymenoptera,Scolioidea,Scoliidae,,Dasyscolia,Dasyscolia ciliata
+Proserpinus proserpina,Le Sphinx de l'Epilobe,Lepidoptera,Bombycoidea,Sphingidae,Macroglossinae,Proserpinus,Proserpinus proserpina
+Agriades optilete,L'Azuré de la Canneberge,Lepidoptera,Papilionoidea,Lycaenidae,Polyommatinae,Agriades,Agriades optilete
+"Bena, Pseudoips",Les Halias,Lepidoptera,Noctuoidea,Nolidae,Chloephorinae,Pseudoips,
