@@ -57,4 +57,4 @@ Le sous-dossier Non_supervise comprend lui-même deux sous-dossiers relatifs aux
 
   - Deux notebooks sont disponibles. Ils permettent de comprendre les différents modules développés pour la prédiction de richesse spécifique.
 
-  - Ensuite, certains scripts peuvent être lancés. Les scripts peuvent se lancer via la commande `python nom_du_script.py` dans un terminal. Les modules se trouvent dans le dossier models ainsi que dans models/supervised.
+  - Ensuite, certains scripts peuvent être lancés. Les scripts peuvent se lancer via la commande `python nom_du_script.py` dans un terminal. Les modules se trouvent dans le dossier models ainsi que dans models/supervised. Les modèles dump se trouvent également dans models/supervised en extension .joblib.
