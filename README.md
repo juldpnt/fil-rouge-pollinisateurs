@@ -21,8 +21,19 @@ Le projet utilise la base de données du SPIPOLL, un dispositif de suivi des ins
 
 ## Utilisation 
 
+### Obtention du dataset de travail
 
-# Contenu des dossiers
+Avant de commencer, il est nécessaire de déposer les 4 fichiers csv dans le sous-dossier raw_data du dossier data. Ensuite, exécutez le fichier run_data_quality.py.
+```
+python data_quality/run_data_quality.py
+```
+Pour obtenir le dataset de classification des plantes, exécutez le notebook plantnet_pipeline.ipynb du dossier notebooks.   
+Pour obtenir le dataset de classification des insectes, exécutez le notebook insect_classification.ipynb du dossier notebooks.   
+Pour obtenir le dataset avec toutes les classifications, exécutez le notebook merge_insectes_plantes.ipynb du dossier notebooks.   
+  
+Enfin, exécutez le notebook merge_corineland.ipynb du dossier notebooks, pour obtenir le dataset final.
+
+## Contenu des dossiers
 
 Les notebooks se situent dans le dossier du même nom à la racine. Dans ce dossier se trouvent les Jupyter notebooks propres à aux approches supervisée et non supervisée. 
 Le sous-dossier Non_supervise comprend lui-même deux sous-dossiers relatifs aux méthodes employées : Recherche_motifs_frequents et Clustering_DBSCAN. 
