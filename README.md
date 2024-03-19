@@ -21,6 +21,17 @@ Le projet utilise la base de données du SPIPOLL, un dispositif de suivi des ins
 
 ## Utilisation 
 
+### Installation des dépendances
+
+Pour installer les dépendances, nous conseillons l'utilisation de conda/miniconda/mamba avec python >= 3.8.
+
+```python
+conda create --file environment.yml
+```
+
+Si vous souhaitez utiliser pip/venv, vous pouvez installer manuellement les dépendances inscrites dans l'`environment.yml`.
+Les versions des dépendances ne sont pas fixées, certaines fonctions dans le projet pourraient dans le futur avoir des comportements non attendus.
+
 ### Obtention du dataset de travail
 
 Avant de commencer, il est nécessaire de déposer les 4 fichiers csv dans le sous-dossier raw_data du dossier data. Ensuite, exécutez le fichier run_data_quality.py.
